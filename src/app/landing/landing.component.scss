@@ -1,0 +1,52 @@
+@import "../variables.scss";
+
+.landing-container{
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $backColor;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+
+  .banner{
+    border: solid 1px $borderColor;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 2em;
+    color: $lightTextColor;
+    background: $containerColor;
+    padding: 0px 15px;
+  }
+
+  .image {
+    position:relative;
+
+    .placeholder, .colorImg {
+      height: 60vh;
+      max-width: 65vw;
+    }
+
+    .placeholder{
+      z-index: 2;
+    }
+
+    .colorImg {
+      opacity: 100%;
+      position: absolute;
+      left: 0px;
+      top:0px;
+    }
+
+    #colore{
+      z-index: 0;
+    }
+
+    #bordi{
+      z-index: 1;
+    }
+  }
+}
+
