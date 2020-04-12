@@ -44,5 +44,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-/src/assets/icons/flaticon premium pack/
+/src/assets/icons/premium/
 /src/assets/icons/attribute.txt

@@ -14,6 +14,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {HttpClientModule} from "@angular/common/http";
 import { LandingComponent } from './landing/landing.component';
+import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { LandingComponent } from './landing/landing.component';
     TestComponent,
     SummaryPipe,
     HeaderComponent,
-    LandingComponent
+    LandingComponent,
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

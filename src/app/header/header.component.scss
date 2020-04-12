@@ -10,7 +10,7 @@ mat-icon:hover{
 }
 
 #navbar{
-  background: navajowhite;
+  background: $elementColor;
   color: $darkText;
 }
 
@@ -29,6 +29,7 @@ mat-icon:hover{
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
 }
 
 
