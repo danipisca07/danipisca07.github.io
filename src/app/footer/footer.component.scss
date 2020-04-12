@@ -1,0 +1,30 @@
+@import "../variables.scss";
+
+.container{
+  margin-top:15px;
+  padding-top: 5px;
+  position: relative;
+  min-height: 100px;
+  background: $elementColor;
+}
+
+.container:before{
+  content: "";
+  background-image: url("../../assets/images/drawline.svg");
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  top: -10px;
+  height: 20px;
+  width: 100vw;
+}
+
+#footerLine{
+  position: absolute;
+  top: -15px;
+
+  height: 20px;
+  width: 100%;
+
+}
+
