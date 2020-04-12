@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 h1{
-  margin: 30px 0;
+  margin: 30px 0 0 0;
   font-family: $mainFont;
   text-align: center;
   font-size: 3em;
@@ -21,6 +21,7 @@ h1{
     align-self: flex-start;
     position: relative;
     padding-top: 170px;
+    margin-top: 10px;
 
    /* background: $elementColor;
     background-clip: content-box;*/
