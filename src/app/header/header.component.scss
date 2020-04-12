@@ -4,8 +4,21 @@ mat-icon {
   padding: 0 14px;
 }
 
+
 mat-icon:hover{
   color: $backColor;
+}
+
+#navbar{
+  background: navajowhite;
+  color: $darkText;
+}
+
+#firma{
+  font-family: Belove;
+  font-size: 500%;
+  line-height: inherit;
+  vertical-align: middle;
 }
 
 .example-spacer {
