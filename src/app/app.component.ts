@@ -58,6 +58,6 @@ export class AppComponent {
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/042-podium.svg'))
     this.matIconRegistry.addSvgIcon(
       'medal',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/049-medal.svg'))
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/049-medal-1.svg'))
   }
 }

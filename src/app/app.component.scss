@@ -5,3 +5,30 @@
   src: url(../assets/fonts/Belove.otf) format("opentype");
 }
 
+/******* LIST BOXES *********/
+
+app-sliding-div .sliding-div{
+  border-bottom-right-radius: 25px;
+}
+
+.listDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  align-items: center;
+
+  p{
+    max-width: 60%;
+  }
+
+  mat-icon{
+    max-width: 35%;
+    min-width: 150px;
+    min-height: 150px;
+    margin: 20px;
+  }
+
+}

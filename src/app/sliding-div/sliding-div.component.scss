@@ -1,0 +1,30 @@
+@import "../variables.scss";
+
+.sliding-div{
+  width: 100%;
+  background: aquamarine;
+  border-bottom-right-radius: 35px;
+  position:relative;
+}
+
+.sliding-div::after{
+  content: "";
+  background-image: url("../../assets/images/shinycorner.png");
+  opacity: 60%;
+  background-size: contain;
+  position: absolute;
+  z-index: 9;
+  bottom: 5px;
+  right: 5px;
+  width: 45px;
+  height: 45px;
+}
+
+.slide-in{
+  transform: translateX(-100%);
+  animation: slide-in 0.8s ease forwards;
+}
+
+@keyframes slide-in {
+  to {transform: translateX(0)}
+}

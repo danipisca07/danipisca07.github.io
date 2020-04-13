@@ -16,6 +16,8 @@ import {HttpClientModule} from "@angular/common/http";
 import { LandingComponent } from './landing/landing.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { SlidingDivComponent } from './sliding-div/sliding-div.component';
+import {InViewportModule} from "ng-in-viewport";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     LandingComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    SlidingDivComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { FooterComponent } from './footer/footer.component';
     MatMenuModule,
     MatIconModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    InViewportModule
   ],
   providers: [ServizioService],
   bootstrap: [AppComponent]
