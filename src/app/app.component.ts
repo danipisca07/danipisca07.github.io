@@ -45,6 +45,9 @@ export class AppComponent {
 
   loadPremiumSvgIcons(){
     this.matIconRegistry.addSvgIcon(
+      'success',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/014-success.svg'))
+    this.matIconRegistry.addSvgIcon(
       'handshake',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/019-handshake.svg'))
     this.matIconRegistry.addSvgIcon(

@@ -9,6 +9,7 @@
 /******* LIST BOXES *********/
 
 .listDiv{
+  border-top: solid 2px black;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -22,6 +23,17 @@
     margin: 5px 0;
     font-family: $mainFont;
     font-size: 2em;
+
+    p{
+      margin: 0;
+    }
+
+    ul{
+      margin:0;
+      font-size: 1em;
+      display: inline-block;
+    }
+
   }
 
   mat-icon{
@@ -33,21 +45,23 @@
 
 }
 
-ul{
+.hiddenUl{
   list-style: none inside none;
   padding: 0;
+
+  li {
+    list-style: none inside none;
+    text-align: center;
+    font-size: 2em;
+  }
 }
 
 li{
   font-family: $mainFont;
-  font-size: 2em;
-  list-style: none inside none;
-  text-align: center;
 
   mat-icon{
     vertical-align: middle;
     width: 2em;
     height: 2em;
-
   }
 }
