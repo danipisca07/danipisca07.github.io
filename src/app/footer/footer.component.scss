@@ -1,6 +1,7 @@
 @import "../variables.scss";
 
 .container{
+  width: 100%;
   margin-top:15px;
   padding-top: 5px;
   position: relative;
@@ -17,6 +18,7 @@
   top: -10px;
   height: 20px;
   width: 100vw;
+  max-width:100%;
 }
 
 #footerLine{
