@@ -3,6 +3,10 @@
 .sliding-div{
 }
 
+.notYetSlided{
+  opacity: 0;
+}
+
 .fullWidth{
   width: 100%;
 }
@@ -30,11 +34,11 @@
   height: 45px;
 }
 
-.slide-in{
-  transform: translateX(-100%);
-  animation: slide-in 0.8s ease forwards;
+.slideIn{
+  transform: translateX(-100vw);
+  animation: slideIn 0.8s ease forwards;
 }
 
-@keyframes slide-in {
+@keyframes slideIn {
   to {transform: translateX(0)}
 }

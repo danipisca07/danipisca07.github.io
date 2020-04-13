@@ -12,17 +12,25 @@ export class SlidingDivComponent implements OnInit {
   @Input() cssClasses : string;
   @Input() backgroundColor : string;
 
+  @Input() delay = 0;
+
   constructor(private renderer:Renderer2 ) {
   }
 
   ngOnInit() {
   }
 
-  isVisible({ target, visible }: { target: Element; visible: boolean }){
-    if(visible){
+  async isVisible({target, visible}: { target: Element; visible: boolean }) {
+    if (visible) {
       console.log(this, " entered the viewport");
-      this.renderer.addClass(target, 'slide-in');
+      await this.wait(this.delay);
+      this.renderer.addClass(target, 'slideIn');
+      this.renderer.removeClass(target, "notYetSlided")
     }
+  }
+
+  wait(ms : number){
+    return new Promise( resolve => setTimeout(resolve, ms));
   }
 
 }
