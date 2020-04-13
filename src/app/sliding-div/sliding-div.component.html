@@ -1,4 +1,6 @@
-<div class="sliding-div" inViewport (inViewportAction)="isVisible($event)">
+<div [class]='"sliding-div " + cssClasses'
+     [style.background]='backgroundColor'
+     inViewport (inViewportAction)="isVisible($event)">
   <ng-content>
   </ng-content>
 </div>

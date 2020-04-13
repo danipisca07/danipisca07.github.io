@@ -1,22 +1,32 @@
 @import "../variables.scss";
 
 .sliding-div{
+}
+
+.fullWidth{
   width: 100%;
-  background: aquamarine;
+}
+
+.cornered{
   border-bottom-right-radius: 35px;
+  -webkit-box-shadow: inset -5px -6px 22px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset -5px -6px 22px -1px rgba(0,0,0,0.75);
+  box-shadow: inset -5px -6px 22px -1px rgba(0,0,0,0.75);
+  overflow:hidden;
   position:relative;
 }
 
-.sliding-div::after{
+.cornered::after{
   content: "";
   background-image: url("../../assets/images/shinycorner.png");
+  background-repeat: no-repeat;
   opacity: 60%;
   background-size: contain;
   position: absolute;
   z-index: 9;
-  bottom: 5px;
-  right: 5px;
-  width: 45px;
+  bottom: 10px;
+  right: 8px;
+  width: 65px;
   height: 45px;
 }
 

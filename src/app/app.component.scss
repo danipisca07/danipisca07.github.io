@@ -1,3 +1,4 @@
+@import "variables.scss";
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap'); //font-family: 'Baloo Tamma 2', cursive;
 
 @font-face {
@@ -6,10 +7,6 @@
 }
 
 /******* LIST BOXES *********/
-
-app-sliding-div .sliding-div{
-  border-bottom-right-radius: 25px;
-}
 
 .listDiv{
   display: flex;
@@ -20,8 +17,11 @@ app-sliding-div .sliding-div{
   text-align: center;
   align-items: center;
 
-  p{
+  .textBox{
     max-width: 60%;
+    margin: 5px 0;
+    font-family: $mainFont;
+    font-size: 2em;
   }
 
   mat-icon{
@@ -31,4 +31,23 @@ app-sliding-div .sliding-div{
     margin: 20px;
   }
 
+}
+
+ul{
+  list-style: none inside none;
+  padding: 0;
+}
+
+li{
+  font-family: $mainFont;
+  font-size: 2em;
+  list-style: none inside none;
+  text-align: center;
+
+  mat-icon{
+    vertical-align: middle;
+    width: 2em;
+    height: 2em;
+
+  }
 }

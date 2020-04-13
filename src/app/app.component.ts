@@ -54,6 +54,9 @@ export class AppComponent {
       'graduation',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/025-graduation.svg'))
     this.matIconRegistry.addSvgIcon(
+      'winner',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/040-winner.svg'))
+    this.matIconRegistry.addSvgIcon(
       'podium',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/042-podium.svg'))
     this.matIconRegistry.addSvgIcon(
