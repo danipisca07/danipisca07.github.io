@@ -2,32 +2,40 @@
 <h1>Me in 4 words</h1>
 
 <div id="aboutContainer">
-  <div class="box">
-    <mat-icon svgIcon="graduation"></mat-icon>
-    <div class="hexagon">
-      <h2>Computer Engineer</h2>
-      <p>About to complete the Master's degree in Computer Engineering</p>
+  <app-sliding-div [delay]="0">
+    <div class="box">
+      <mat-icon svgIcon="graduation"></mat-icon>
+      <div class="hexagon">
+        <h2>Computer Engineer</h2>
+        <p>About to complete the Master's degree in Computer Engineering</p>
+      </div>
     </div>
-  </div>
-  <div class="box">
-    <mat-icon svgIcon="thinking"></mat-icon>
-    <div class="hexagon">
-      <h2>Hands on</h2>
-      <p>Pragmatic approach to every problem focusing on how to solve it</p>
+  </app-sliding-div>
+  <app-sliding-div [delay]="300">
+    <div class="box">
+      <mat-icon svgIcon="thinking"></mat-icon>
+      <div class="hexagon">
+        <h2>Hands on</h2>
+        <p>Pragmatic approach to every problem focusing on how to solve it</p>
+      </div>
     </div>
-  </div>
-  <div class="box">
-    <mat-icon svgIcon="handshake"></mat-icon>
-    <div class="hexagon">
-      <h2>Team-worker</h2>
-      <p>Open minded, collaborative and eager to learn new things</p>
+  </app-sliding-div>
+  <app-sliding-div [delay]="600">
+    <div class="box">
+      <mat-icon svgIcon="handshake"></mat-icon>
+      <div class="hexagon">
+        <h2>Team-worker</h2>
+        <p>Open minded, collaborative and eager to learn new things</p>
+      </div>
     </div>
-  </div>
-  <div class="box">
-    <mat-icon svgIcon="podium"></mat-icon>
-    <div class="hexagon">
-      <h2>Active</h2>
-      <p>I'm my free time I also compete in national and internationals jet-ski competitions</p>
+  </app-sliding-div>
+  <app-sliding-div [delay]="900">
+    <div class="box">
+      <mat-icon svgIcon="podium"></mat-icon>
+      <div class="hexagon">
+        <h2>Active</h2>
+        <p>I'm my free time I also compete in national and internationals jet-ski competitions</p>
+      </div>
     </div>
-  </div>
+  </app-sliding-div>
 </div>

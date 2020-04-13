@@ -17,9 +17,12 @@ h1{
   text-align: center;
   margin-bottom: 30px;
 
+  > * {
+    align-self: flex-start;
+  }
+
   .box{
     width: 200px;
-    align-self: flex-start;
     position: relative;
     padding-top: 170px;
     margin-top: 10px;
