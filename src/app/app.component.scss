@@ -10,20 +10,20 @@
 
 .listDiv{
   border-top: solid 2px black;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   text-align: center;
   align-items: center;
+  font-family: $mainFont;
+  font-size: 2em;
 
   .textBox{
     max-width: 60%;
     margin: 5px 0;
-    font-family: $mainFont;
-    font-size: 2em;
-
     p{
       margin: 0;
     }
@@ -36,7 +36,7 @@
 
   }
 
-  mat-icon{
+  > mat-icon{
     max-width: 35%;
     min-width: 150px;
     min-height: 150px;
@@ -48,11 +48,32 @@
 .hiddenUl{
   list-style: none inside none;
   padding: 0;
-
+  margin: 0;
+  width: 100%;
   li {
     list-style: none inside none;
     text-align: center;
-    font-size: 2em;
+  }
+}
+
+#schoolList, #projectList{
+  max-width: 95%;
+  list-style: none inside none;
+  padding: 0;
+  margin: 0;
+  flex-basis: 60%;
+  li {
+    list-style: none inside none;
+    text-align: left;
+  }
+}
+
+#projectList {
+  li mat-icon {
+    padding: 5px 0;
+  }
+  li:hover {
+    text-decoration: underline;
   }
 }
 
@@ -64,4 +85,25 @@ li{
     width: 2em;
     height: 2em;
   }
+}
+
+.grid {
+  display: none !important;
+  min-width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+
+  .gridBox {
+    background: white;
+    flex-grow: 1;
+    border: 1px solid gray;
+    min-width: 15%;
+    font-size: 0.6em;
+  }
+
 }

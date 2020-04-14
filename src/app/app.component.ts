@@ -14,6 +14,7 @@ export class AppComponent {
               private domSanitizer: DomSanitizer){
     this.loadSocialSvgIcons();
     this.loadPremiumSvgIcons();
+    this.loadOtherIcons();
   }
 
   loadSocialSvgIcons(){
@@ -45,11 +46,17 @@ export class AppComponent {
 
   loadPremiumSvgIcons(){
     this.matIconRegistry.addSvgIcon(
+      'tasks',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/003-tasks.svg'))
+    this.matIconRegistry.addSvgIcon(
       'success',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/014-success.svg'))
     this.matIconRegistry.addSvgIcon(
       'handshake',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/019-handshake.svg'))
+    this.matIconRegistry.addSvgIcon(
+      'certificate',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/023-certificate.svg'))
     this.matIconRegistry.addSvgIcon(
       'thinking',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/024-thinking.svg'))
@@ -68,5 +75,23 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon(
       'medal',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/049-medal-1.svg'))
+  }
+
+  loadOtherIcons(){
+    this.matIconRegistry.addSvgIcon(
+      'android',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/android.svg'))
+    this.matIconRegistry.addSvgIcon(
+      'html5',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/html.svg'))
+    this.matIconRegistry.addSvgIcon(
+      'cloud',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/cloud.svg'))
+    this.matIconRegistry.addSvgIcon(
+      'telegram',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/telegram.svg'))
+    this.matIconRegistry.addSvgIcon(
+      'github2',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/github2.svg'))
   }
 }

@@ -9,29 +9,60 @@
   <div class="listDiv">
     <div class="textBox">
       <p>Since when I've started coding with my first programming language (which I don't even remember anymore)
-      I had the chance to learn many other languages, some during my career as a student and some because of personal interesting.
+      I had the chance to learn many other languages and frameworks, some during my career as a student and some because of personal interesting.
       </p>
-      <ul>
-        <li>C#</li>
-        <li>Javascript</li>
-        <li>CSS</li>
-        <li>Angular</li>
-      </ul>
     </div>
     <mat-icon svgIcon="success"></mat-icon>
+    <div class="grid">
+      <div class="gridBox">C#</div>
+      <div class="gridBox">Javascript</div>
+      <div class="gridBox">CSS</div>
+      <div class="gridBox">Angular</div>
+      <div class="gridBox">Node.js</div>
+      <div class="gridBox">Java</div>
+      <div class="gridBox">Python</div>
+      <div class="gridBox">WebGL</div>
+      <div class="gridBox">Unity</div>
+      <div class="gridBox">Spring/JEE</div>
+      <div class="gridBox">MongoDB</div>
+    </div>
+  </div>
+</app-sliding-div>
+<app-sliding-div backgroundColor="rgb(255, 115, 115)" cssClasses="cornered fullWidth">
+  <div class="listDiv">
+    <ul id="schoolList">
+      <li>2015: IT expert diploma (88/100)</li>
+      <li>2018: Computer Engineer Bachelor Degree UNIBO (109/110)</li>
+      <li>Currently: Computer Engineer Master Degree UNIBO</li>
+    </ul>
+    <mat-icon svgIcon="certificate"></mat-icon>
+
   </div>
 </app-sliding-div>
 <app-sliding-div backgroundColor="#ffdead" cssClasses="cornered fullWidth">
+  <div class="listDiv">
+    <ul id="projectList">
+      <li onClick='window.open("https://www.amazon.it/Pisca-Studio-Crazy-Cyclist/dp/B016YOIKWK")'><mat-icon svgIcon="android"></mat-icon> CrazyCyclist Mobile Game</li>
+      <li onClick='window.open("http://www.piscagliacostruzioni.it")'><mat-icon svgIcon="html5"></mat-icon> Piscaglia Costruzioni Website</li>
+      <li onClick='window.open("https://github.com/danipisca07/Modeling4Cloud")'><mat-icon svgIcon="cloud"></mat-icon> Modeling4Cloud, monitor/benchmark for cloud services</li>
+      <li onClick='window.open("http://www.dreamsracing.net")'><mat-icon svgIcon="html5"></mat-icon> Dreams Racing Website</li>
+      <li onClick='window.open("https://github.com/danipisca07/ListaBot")'><mat-icon svgIcon="telegram"></mat-icon> ListaBot, Heroku template for telegram bots</li>
+      <li onClick='window.open("https://github.com/danipisca07/")'><mat-icon svgIcon="github2"></mat-icon> Others...</li>
+    </ul>
+    <mat-icon svgIcon="tasks"></mat-icon>
+  </div>
+</app-sliding-div>
+<app-sliding-div backgroundColor="rgb(189, 255, 173)" cssClasses="cornered fullWidth">
   <div class="listDiv">
     <p class="textBox">Outside everything that is connected with a computer, my main passion is having fun on a jet-ski.
       This passion has been passed on to me by my father and my brother! I currently in nationals
       and internationals championships</p>
     <mat-icon svgIcon="medal"></mat-icon>
+    <ul class="hiddenUl">
+      <li><mat-icon svgIcon="winner"></mat-icon> 2017 Italian Champion Ski F2</li>
+      <li><mat-icon svgIcon="winner"></mat-icon> 2019 Italian Champion Ski F1</li>
+    </ul>
   </div>
-  <ul class="hiddenUl">
-    <li><mat-icon svgIcon="winner"></mat-icon> 2017 Italian Champion Ski F2</li>
-    <li><mat-icon svgIcon="winner"></mat-icon> 2019 Italian Champion Ski F1</li>
-  </ul>
 </app-sliding-div>
 <app-footer></app-footer>
 
