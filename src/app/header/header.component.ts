@@ -26,4 +26,5 @@ export class HeaderComponent implements OnInit {
       element.classList.remove('sticky');
     }
   }
+
 }

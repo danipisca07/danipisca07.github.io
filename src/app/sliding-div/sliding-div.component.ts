@@ -22,7 +22,7 @@ export class SlidingDivComponent implements OnInit {
 
   async isVisible({target, visible}: { target: Element; visible: boolean }) {
     if (visible) {
-      console.log(this, " entered the viewport");
+      //console.log(this, " entered the viewport");
       await this.wait(this.delay);
       this.renderer.addClass(target, 'slideIn');
       this.renderer.removeClass(target, "notYetSlided")

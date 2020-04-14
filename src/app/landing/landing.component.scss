@@ -13,11 +13,12 @@
   overflow-x: hidden;
 
   .banner{
-    border: solid 1px $borderColor;
+    border: solid 2px black;
+    border-radius: 20px;
     font-family: 'Baloo Tamma 2', cursive;
     font-size: 2em;
-    color: $lightTextColor;
-    background: $containerColor;
+    color: $darkTextColor;
+    background: $elementColor;
     padding: 0px 15px;
   }
 
@@ -34,7 +35,7 @@
     }
 
     .colorImg {
-      opacity: 100%;
+      opacity: 0%;
       position: absolute;
       left: 0px;
       top:0px;

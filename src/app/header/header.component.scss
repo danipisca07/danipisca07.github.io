@@ -11,14 +11,37 @@ mat-icon:hover{
 
 #navbar{
   background: $elementColor;
-  color: $darkText;
+  color: $darkTextColor;
+
+  .socials {
+    justify-content: space-evenly;
+    align-content: center;
+    width: 40%;
+    display: flex;
+    max-width: 200px;
+
+    a{
+      color: inherit;
+      font-size: xx-large;
+      width: 52px;
+
+
+      mat-icon{
+        padding: 0;
+      }
+    }
+  }
+
+
 }
 
 #firma{
   font-family: Belove;
-  font-size: 500%;
+  //font-size: 4em;
   line-height: inherit;
   vertical-align: middle;
+  width: 40vw;
+  max-width: 530px;
 }
 
 .example-spacer {
