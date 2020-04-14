@@ -21,11 +21,20 @@
   font-family: $mainFont;
   font-size: 2em;
 
+  h1{
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 100%;
+  }
+
   .textBox{
     max-width: 60%;
     margin: 5px 0;
     p{
       margin: 0;
+      line-height: 100%;
     }
 
     ul{
