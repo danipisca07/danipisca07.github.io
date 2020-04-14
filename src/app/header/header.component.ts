@@ -18,12 +18,14 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
+    let element = document.getElementById('navbar');
+    let spaceHolder = document.getElementById('spaceholder');
     if (window.pageYOffset > window.innerHeight) {
-      let element = document.getElementById('navbar');
       element.classList.add('sticky');
+      spaceHolder.classList.add('spaceHolder');
     } else {
-      let element = document.getElementById('navbar');
       element.classList.remove('sticky');
+      spaceHolder.classList.remove('spaceHolder');
     }
   }
 
