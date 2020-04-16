@@ -1,12 +1,24 @@
 @import "../variables.scss";
 
+#backgroundWebGL {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  border: none;
+  pointer-events: none;
+}
+
 .landing-container{
+  position:relative;
   scroll-snap-type: y mandatory;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: $backColor;
+  //background: $backColor;
   width: 100vw;
   max-width: 100%;
   height: 100vh;

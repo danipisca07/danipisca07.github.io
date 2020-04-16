@@ -16,6 +16,7 @@ export class LandingComponent implements OnInit {
   ngOnInit() {
   }
 
+  //TODO: modificare da distanza a solo X?? Oppure dare effetto 3D?
   @HostListener('mousemove', ['$event'])
   onMousemove(event: MouseEvent) {
     const maxDiff = 1500; //Massima lontananza del mouse dal centro dello schermo considerata
