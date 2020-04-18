@@ -19,18 +19,15 @@
   text-align: center;
   align-items: center;
   font-family: $mainFont;
-  font-size: 2em;
 
   h1{
     width: 100%;
     margin: 10px 0;
-    font-size: 1.5em;
     font-weight: normal;
     line-height: 100%;
   }
 
   .textBox{
-    max-width: 60%;
     margin: 5px 0;
     p{
       margin: 0;
@@ -43,13 +40,6 @@
       display: inline-block;
     }
 
-  }
-
-  > mat-icon{
-    max-width: 35%;
-    min-width: 150px;
-    min-height: 150px;
-    margin: 20px;
   }
 
 }
@@ -66,11 +56,10 @@
 }
 
 #schoolList, #projectList{
-  max-width: 95%;
   list-style: none inside none;
   padding: 0;
   margin: 0;
-  flex-basis: 60%;
+
   li {
     list-style: none inside none;
     text-align: left;
@@ -91,8 +80,6 @@ li{
 
   mat-icon{
     vertical-align: middle;
-    width: 2em;
-    height: 2em;
   }
 }
 
@@ -115,4 +102,67 @@ li{
     font-size: 0.6em;
   }
 
+}
+
+@media (max-width: 550px){
+  #schoolList, #projectList{
+    max-width: 90%;
+    flex-basis: 90%;
+  }
+
+  .listDiv{
+    font-size: 1.5em;
+
+    h1{
+      font-size: 1.5em;
+    }
+
+    .textBox {
+      max-width: 90%;
+    }
+
+    > mat-icon{
+      max-width: 35%;
+      min-width: 100px;
+      min-height: 100px;
+      margin: 15px;
+    }
+  }
+  li{
+    mat-icon{
+      width: 1em;
+      height: 1em;
+    }
+  }
+}
+@media (min-width: 551px){
+  #schoolList, #projectList{
+    max-width: 95%;
+    flex-basis: 60%;
+  }
+
+  .listDiv{
+    font-size: 2em;
+    h1{
+      font-size: 1.5em;
+    }
+
+    .textBox {
+      max-width: 60%;
+    }
+
+    > mat-icon{
+      max-width: 35%;
+      min-width: 150px;
+      min-height: 150px;
+      margin: 20px;
+    }
+  }
+
+  li{
+    mat-icon{
+      width: 2em;
+      height: 2em;
+    }
+  }
 }

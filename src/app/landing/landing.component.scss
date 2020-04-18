@@ -29,10 +29,11 @@
     border: solid 2px black;
     border-radius: 20px;
     font-family: 'Baloo Tamma 2', cursive;
-    font-size: 2em;
     color: $darkTextColor;
     background: $elementColor;
+    text-align: center;
     padding: 0px 15px;
+    display: inline-block;
   }
 
   .image {
@@ -63,5 +64,16 @@
       z-index: 1;
     }
   }
+}
+
+@media (max-width: 365px){
+  .banner{
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 366px){
+ .banner{
+   font-size: 2em;
+ }
 }
 

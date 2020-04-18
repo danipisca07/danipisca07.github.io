@@ -219,8 +219,9 @@
             }
 
             function mouseScroll(e) {
-                mouseLastP[1] -= e.deltaY*0.8;
+                //mouseLastP[1] -= e.deltaY*0.8; //TODO: FIX
                 //document.getElementById('console').innerHTML = ""+e.deltaY;
+              render(0);
             }
 
             function resetPos(e){
