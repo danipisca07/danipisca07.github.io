@@ -62,13 +62,16 @@
         </script>
 
         <script id="webgl-helps">
-            function fillCanvasWithSquares(gl, canvasWidth, canvasHeight, nSquare, offsetUniformLocation, colorUniformLocation){
+            var ht = new Object();
+            function fillCanvasWithSquares(gl, canvasWidth, canvasHeight, nSquare, offsetUniformLocation, colorUniformLocation, newColors=false){
                 var nw = 0, nh=0;
                 var minDim = canvasHeight < canvasWidth ? canvasHeight : canvasWidth;
                 var diag = minDim/nSquare;
                 var squareW = diag/Math.sqrt(2);
                 //console.log("Min dim was:"+minDim+", with nSquare = "+nSquare+" calculated diag: "+diag);
                 var oddRow = false;
+
+                if(newColors) ht = new Object();
 
                 setRectangle(gl, 0, 0, squareW, squareW);
                 for(var currH=0; currH<canvasHeight+diag/2; currH += diag/2){
@@ -77,7 +80,9 @@
                     for(nw=0; currW<canvasWidth; currW += diag){
                         nw++;
                         gl.uniform2f(offsetUniformLocation, currW, currH);
-                        gl.uniform4f(colorUniformLocation, Math.random(), Math.random(), Math.random(), 1);
+                        if(ht[''+currW+currH] == undefined)
+                          ht[''+currW+currH] = [Math.random(),Math.random(),Math.random()];
+                        gl.uniform4f(colorUniformLocation, ht[''+currW+currH][0], ht[''+currW+currH][1], ht[''+currW+currH][2], 1);
                         gl.drawArrays(gl.TRIANGLES, 0 ,6);
                     }
                     oddRow = !oddRow;
@@ -189,11 +194,12 @@
             */
 
             function render(elapsedTime){
-              webglUtils.resizeCanvasToDisplaySize(gl.canvas);
-              gl.uniform2f(mousePUniformLocation, mouseLastP[0], mouseLastP[1]);
-              gl.clearColor(0, 0, 0, 0);
-              gl.clear(gl.COLOR_BUFFER_BIT);
-              fillCanvasWithSquares(gl, gl.canvas.width, gl.canvas.height, nSquares, offsetUniformLocation,colorUniformLocation);
+                webglUtils.resizeCanvasToDisplaySize(gl.canvas);
+                gl.uniform2f(mousePUniformLocation, mouseLastP[0], mouseLastP[1]);
+                gl.clearColor(0, 0, 0, 0);
+                gl.clear(gl.COLOR_BUFFER_BIT);
+                fillCanvasWithSquares(gl, gl.canvas.width, gl.canvas.height, nSquares, offsetUniformLocation,colorUniformLocation, elapsedTime > 0);
+                    
             }
 
             function mouseMove(e){
@@ -208,12 +214,12 @@
               //console.log( mouseLastP[0]+"-"+mouseLastP[1]);
               //document.getElementById('console').innerHTML = mouseLastP[0]+"-"+mouseLastP[1];
 
-              render();
+              render(0);
             }
 
             function resetPos(e){
               mouseLastP[0] = mouseLastP[1] = 0;
-              render();
+              render(0);
             }
 
         </script>
