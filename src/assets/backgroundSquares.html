@@ -52,12 +52,12 @@
             void main() {
                 float dist = distance(u_mouseP, gl_FragCoord.xy);
                 float range = u_radius.x - u_radius.y;
-                float tmp = (dist-u_radius.x)/range;
-                float zero = 0.2;
-                float uno = 1.;
-                float alfa = clamp(tmp, zero, uno);
+                float unclamped = (dist-u_radius.x)/range;
+                float minAlpha = 0.2;
+                float maxAlpha = 1.;
+                float alpha = clamp(unclamped, minAlpha, maxAlpha);
 
-                gl_FragColor = vec4(u_color.xyz, alfa);
+                gl_FragColor = vec4(u_color.xyz, alpha);
             }
         </script>
 
@@ -182,6 +182,7 @@
             startAnimating(backgroundFPS);
 
             window.addEventListener('mousemove', mouseMove);
+            window.addEventListener('wheel', mouseScroll);
             window.addEventListener('mouseout', resetPos);
 
             window.addEventListener('resize', render);
@@ -217,8 +218,13 @@
               render(0);
             }
 
+            function mouseScroll(e) {
+                mouseLastP[1] -= e.deltaY*0.8;
+                //document.getElementById('console').innerHTML = ""+e.deltaY;
+            }
+
             function resetPos(e){
-              mouseLastP[0] = mouseLastP[1] = 0;
+              mouseLastP[0] = mouseLastP[1] = -999;
               render(0);
             }
 
