@@ -5,10 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-github": "ng build --prod --base-href \"danipisca07.github.io\" && angular-cli-ghpages -d dist/danipisca07-website --branch=master"
+    "deploy-github": "ng build --prod --base-href \"danipisca07.github.io\" && angular-cli-ghpages -d dist/danipisca07-website --branch=master",
+    "ngh-deploy": "angular-cli-ghpages -d dist/danipisca07-website --branch=master --no-silent --repo=https://github.com/danipisca07/danipisca07.github.io.git"
   },
   "private": true,
   "dependencies": {
@@ -24,9 +26,11 @@
     "@angular/router": "^8.2.14",
     "angular-cli-ghpages": "^0.6.2",
     "angular-fittext": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "hammerjs": "^2.0.8",
     "intersection-observer": "^0.7.0",
     "ng-in-viewport": "^6.0.3",
+    "ngh": "^0.2.12",
     "rxjs": "~6.4.0",
     "tslib": "^1.11.1",
     "zone.js": "~0.9.1"
