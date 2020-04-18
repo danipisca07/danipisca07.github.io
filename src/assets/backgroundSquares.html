@@ -8,19 +8,20 @@
                 height: 100vh;
                 left: 0;
                 top: 0;
-                z-index: -10;
                 border: none;
-                pointer-events: none;
             }
         </style>
         <script>
             //DEFAULT SETTINGS
             var nSquares = 20;
             var backgroundFPS = 1;
+            var minRadius= 100;
+            var maxRadius= 200;
         </script>
     </head>
     <body>
         <canvas id="webglCanvas"></canvas>
+        <p id="console"></p>
         <script id="vertex-shader-2d" type="not-javascript">
             attribute vec2 a_position;
 
@@ -45,8 +46,18 @@
         <script id="fragment-shader-2d" type="not-javascript">
             precision mediump float;
             uniform vec4 u_color;
+            uniform vec2 u_mouseP;
+            uniform vec2 u_radius;
+
             void main() {
-                gl_FragColor = u_color;
+                float dist = distance(u_mouseP, gl_FragCoord.xy);
+                float range = u_radius.x - u_radius.y;
+                float tmp = (dist-u_radius.x)/range;
+                float zero = 0.2;
+                float uno = 1.;
+                float alfa = clamp(tmp, zero, uno);
+
+                gl_FragColor = vec4(u_color.xyz, alfa);
             }
         </script>
 
@@ -116,19 +127,13 @@
 
         <script>
             /******* INIT ******/
-            var positions = [
-            0, 0,
-            0, 150,
-            300, 0,
-            300, 0,
-            300, 150,
-            0, 150,
-            ];
 
             var val45 = 0.7071;
             var rotM=[
             val45,-val45,
             val45,val45];
+
+            var mouseLastP = [-999, -999];
 
             var canvas = document.getElementById('webglCanvas');
             gl = canvas.getContext('webgl');
@@ -140,6 +145,8 @@
             var resolutionUniformLocation = gl.getUniformLocation(program, "u_resolution");
             var colorUniformLocation = gl.getUniformLocation(program, "u_color");
             var rotMUniformLocation = gl.getUniformLocation(program, "u_rotM");
+            var mousePUniformLocation = gl.getUniformLocation(program, "u_mouseP");
+            var radiusUniformLocation = gl.getUniformLocation(program, "u_radius");
 
             var positionBuffer = gl.createBuffer();
             gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
@@ -164,8 +171,15 @@
 
             gl.uniform2f(resolutionUniformLocation, gl.canvas.width, gl.canvas.height);
             gl.uniformMatrix2fv(rotMUniformLocation, false, rotM);
+            gl.uniform2f(mousePUniformLocation, mouseLastP[0], mouseLastP[1]);
+            gl.uniform2f(radiusUniformLocation, minRadius, maxRadius);
 
             startAnimating(backgroundFPS);
+
+            window.addEventListener('mousemove', mouseMove);
+            window.addEventListener('mouseout', resetPos);
+
+            window.addEventListener('resize', render);
 
             /*
             setRectangle(gl, -25, -25, 25, 25);
@@ -175,10 +189,31 @@
             */
 
             function render(elapsedTime){
-                webglUtils.resizeCanvasToDisplaySize(gl.canvas);
-                gl.clearColor(0, 0, 0, 0);
-            gl.clear(gl.COLOR_BUFFER_BIT);
-                fillCanvasWithSquares(gl, gl.canvas.width, gl.canvas.height, nSquares, offsetUniformLocation,colorUniformLocation);
+              webglUtils.resizeCanvasToDisplaySize(gl.canvas);
+              gl.uniform2f(mousePUniformLocation, mouseLastP[0], mouseLastP[1]);
+              gl.clearColor(0, 0, 0, 0);
+              gl.clear(gl.COLOR_BUFFER_BIT);
+              fillCanvasWithSquares(gl, gl.canvas.width, gl.canvas.height, nSquares, offsetUniformLocation,colorUniformLocation);
+            }
+
+            function mouseMove(e){
+              const canvas = gl.canvas;
+              const rect = canvas.getBoundingClientRect();
+
+              const x = (e.clientX - rect.left) * canvas.width / rect.width;
+              const y = (e.clientY - rect.top)  * canvas.height / rect.height;
+              mouseLastP[0] = x;
+              mouseLastP[1] = canvas.height - y - 1;
+
+              //console.log( mouseLastP[0]+"-"+mouseLastP[1]);
+              //document.getElementById('console').innerHTML = mouseLastP[0]+"-"+mouseLastP[1];
+
+              render();
+            }
+
+            function resetPos(e){
+              mouseLastP[0] = mouseLastP[1] = 0;
+              render();
             }
 
         </script>

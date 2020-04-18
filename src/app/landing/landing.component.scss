@@ -6,9 +6,8 @@
   height: 100vh;
   left: 0;
   top: 0;
-  z-index: -10;
   border: none;
-  pointer-events: none;
+  z-index: 0;
 }
 
 .landing-container{
@@ -25,6 +24,8 @@
   overflow-x: hidden;
 
   .banner{
+    position: relative;
+    z-index: 2;
     border: solid 2px black;
     border-radius: 20px;
     font-family: 'Baloo Tamma 2', cursive;
@@ -36,6 +37,7 @@
 
   .image {
     position:relative;
+    z-index: 1;
 
     .placeholder, .colorImg {
       max-height: 60vh;
