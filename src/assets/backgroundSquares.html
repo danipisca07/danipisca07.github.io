@@ -62,7 +62,7 @@
         </script>
 
         <script id="webgl-helps">
-            var ht = new Object();
+            var ht = new Object(); //TODO: USE A REAL HASH-TABLE!!!
             function fillCanvasWithSquares(gl, canvasWidth, canvasHeight, nSquare, offsetUniformLocation, colorUniformLocation, newColors=false){
                 var nw = 0, nh=0;
                 var minDim = canvasHeight < canvasWidth ? canvasHeight : canvasWidth;
@@ -199,7 +199,7 @@
                 gl.clearColor(0, 0, 0, 0);
                 gl.clear(gl.COLOR_BUFFER_BIT);
                 fillCanvasWithSquares(gl, gl.canvas.width, gl.canvas.height, nSquares, offsetUniformLocation,colorUniformLocation, elapsedTime > 0);
-                    
+
             }
 
             function mouseMove(e){
