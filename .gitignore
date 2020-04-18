@@ -46,3 +46,4 @@ testem.log
 Thumbs.db
 /src/assets/icons/premium/
 /src/assets/icons/attribute.txt
+/src/assets/.vscode/launch.json
