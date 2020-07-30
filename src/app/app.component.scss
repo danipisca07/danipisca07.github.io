@@ -27,6 +27,11 @@
   }
 }
 
+.link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /******* LIST BOXES *********/
 
 .listDiv{
@@ -88,6 +93,9 @@
 }
 
 #projectList {
+  li {
+    cursor: pointer;
+  }
   li mat-icon {
     padding: 5px 0;
   }

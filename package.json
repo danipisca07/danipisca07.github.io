@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-github": "ng build --prod && angular-cli-ghpages -d dist/danipisca07-website --branch=master --no-silent --cname=danielepiscaglia.me"
+    "deploy-github": "ng build --prod && angular-cli-ghpages -d dist/danipisca07-website --branch=master --no-silent --cname=danielepiscaglia.me",
+    "deploy-github-temp": "ng build --prod && angular-cli-ghpages -d dist/danipisca07-website --branch=master --no-silent"
   },
   "private": true,
   "dependencies": {
