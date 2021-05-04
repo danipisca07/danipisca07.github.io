@@ -81,7 +81,7 @@
   }
 }
 
-#schoolList, #projectList{
+#schoolList, #projectList, #workList{
   list-style: none inside none;
   padding: 0;
   margin: 0;
@@ -134,7 +134,7 @@ li{
 }
 
 @media (max-width: 550px){
-  #schoolList, #projectList{
+  #schoolList, #projectList, #workList{
     max-width: 90%;
     flex-basis: 90%;
   }
@@ -165,7 +165,7 @@ li{
   }
 }
 @media (min-width: 551px){
-  #schoolList, #projectList{
+  #schoolList, #projectList, #workList{
     max-width: 95%;
     flex-basis: 60%;
   }

@@ -49,6 +49,9 @@ export class AppComponent {
       'tasks',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/003-tasks.svg'))
     this.matIconRegistry.addSvgIcon(
+      'briefcase',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/007-briefcase.svg'))
+    this.matIconRegistry.addSvgIcon(
       'success',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/premium/014-success.svg'))
     this.matIconRegistry.addSvgIcon(
@@ -96,5 +99,8 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon(
       'pdf',
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/pdf.svg'))
+    this.matIconRegistry.addSvgIcon(
+      'iota',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/iota.svg'))
   }
 }
