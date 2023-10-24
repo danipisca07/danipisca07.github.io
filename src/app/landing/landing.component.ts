@@ -8,8 +8,8 @@ import {DomSanitizer, SafeStyle} from "@angular/platform-browser";
 })
 export class LandingComponent implements OnInit {
   sanitizer : DomSanitizer;
-  translateR: SafeStyle;
-  translateL: SafeStyle;
+  translateR: SafeStyle | undefined;
+  translateL: SafeStyle | undefined;
 
   constructor( private domSanitizer: DomSanitizer) { this.sanitizer = domSanitizer}
 

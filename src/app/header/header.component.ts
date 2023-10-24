@@ -17,15 +17,15 @@ export class HeaderComponent implements OnInit {
   }
 
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll(e) {
+  onWindowScroll(e: any) {
     let element = document.getElementById('navbar');
     let spaceHolder = document.getElementById('spaceholder');
     if (window.pageYOffset > window.innerHeight) {
-      element.classList.add('sticky');
-      spaceHolder.classList.add('spaceHolder');
+      element?.classList.add('sticky');
+      spaceHolder?.classList.add('spaceHolder');
     } else {
-      element.classList.remove('sticky');
-      spaceHolder.classList.remove('spaceHolder');
+      element?.classList.remove('sticky');
+      spaceHolder?.classList.remove('spaceHolder');
     }
   }
 

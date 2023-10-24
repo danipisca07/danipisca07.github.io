@@ -9,8 +9,8 @@ import 'intersection-observer'
 })
 export class SlidingDivComponent implements OnInit {
 
-  @Input() cssClasses : string;
-  @Input() backgroundColor : string;
+  @Input() cssClasses : string | undefined;
+  @Input() backgroundColor : string | undefined;
 
   @Input() delay = 0;
 
