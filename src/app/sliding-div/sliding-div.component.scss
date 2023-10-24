@@ -1,0 +1,44 @@
+@import "../variables.scss";
+
+.sliding-div{
+}
+
+.notYetSlided{
+  opacity: 0;
+}
+
+.fullWidth{
+  width: 100%;
+}
+
+.cornered{
+  border-bottom-right-radius: 35px;
+  -webkit-box-shadow: inset -5px -6px 22px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset -5px -6px 22px -1px rgba(0,0,0,0.75);
+  box-shadow: inset -5px -6px 22px -1px rgba(0,0,0,0.75);
+  overflow:hidden;
+  position:relative;
+}
+
+.cornered::after{
+  content: "";
+  background-image: url("../../assets/images/shinycorner.png");
+  background-repeat: no-repeat;
+  opacity: 60%;
+  background-size: contain;
+  position: absolute;
+  z-index: 9;
+  bottom: 10px;
+  right: 8px;
+  width: 65px;
+  height: 45px;
+}
+
+.slideIn{
+  transform: translateX(-100vw);
+  animation: slideIn 0.8s ease forwards;
+}
+
+@keyframes slideIn {
+  to {transform: translateX(0)}
+}

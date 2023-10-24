@@ -40,8 +40,7 @@ import {AngularFittextModule} from "angular-fittext";
     MatIconModule,
     MatToolbarModule,
     HttpClientModule,
-    InViewportModule,
-    AngularFittextModule
+    InViewportModule
   ],
   providers: [ServizioService],
   bootstrap: [AppComponent]

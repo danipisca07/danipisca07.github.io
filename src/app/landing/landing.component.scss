@@ -1,0 +1,79 @@
+@import "../variables.scss";
+
+#backgroundWebGL {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  border: none;
+  z-index: 0;
+}
+
+.landing-container{
+  position:relative;
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //background: $backColor;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+
+  .banner{
+    position: relative;
+    z-index: 2;
+    border: solid 2px black;
+    border-radius: 20px;
+    font-family: 'Baloo Tamma 2', cursive;
+    color: $darkTextColor;
+    background: $elementColor;
+    text-align: center;
+    padding: 0px 15px;
+    display: inline-block;
+  }
+
+  .image {
+    position:relative;
+    z-index: 1;
+
+    .placeholder, .colorImg {
+      max-height: 60vh;
+      max-width: 65vw;
+    }
+
+    .placeholder{
+      z-index: 2;
+    }
+
+    .colorImg {
+      opacity: 100%;
+      position: absolute;
+      left: 0px;
+      top:0px;
+    }
+
+    #colore{
+      z-index: 0;
+    }
+
+    #bordi{
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 365px){
+  .banner{
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 366px){
+ .banner{
+   font-size: 2em;
+ }
+}
+
