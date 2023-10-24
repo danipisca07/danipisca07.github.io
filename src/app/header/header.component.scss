@@ -28,6 +28,8 @@ mat-icon {
 
 mat-toolbar-row{
   padding: 0;
+  height: 60px;
+  max-height: 10vh;
 }
 
 mat-icon:hover{
@@ -62,6 +64,8 @@ mat-icon:hover{
 
       mat-icon{
         padding: 0;
+        display: table-cell;
+        vertical-align: middle;
       }
     }
   }
@@ -82,4 +86,8 @@ mat-icon:hover{
 
 .spaceHolder{
   height: 64px;
+}
+
+svg {
+  vertical-align: super;
 }

@@ -18,7 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { SlidingDivComponent } from './sliding-div/sliding-div.component';
 import {InViewportModule} from "ng-in-viewport";
-import {AngularFittextModule} from "angular-fittext";
+import {Ng2FittextModule} from "ng2-fittext"
 
 @NgModule({
   declarations: [
@@ -40,7 +40,8 @@ import {AngularFittextModule} from "angular-fittext";
     MatIconModule,
     MatToolbarModule,
     HttpClientModule,
-    InViewportModule
+    InViewportModule,
+    Ng2FittextModule
   ],
   providers: [ServizioService],
   bootstrap: [AppComponent]
