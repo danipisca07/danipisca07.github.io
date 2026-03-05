@@ -1,93 +1,220 @@
-<!-- TODO: Mobile responsive cards -->
-
 <app-landing></app-landing>
 <app-header></app-header>
-<!--<app-test></app-test>-->
-<app-about></app-about>
-<div id="resumeDiv">
-  <p>Want to know more? Download my resume:</p>
-  <a href="assets/resume/DanielePiscaglia_IT.pdf">Italian</a>
-  <a href="assets/resume/DanielePiscaglia_EN.pdf">English</a>
-</div>
-<app-sliding-div backgroundColor="aquamarine" cssClasses="cornered fullWidth">
+
+<!-- About -->
+<app-sliding-div backgroundColor="#ffffff" cssClasses="fullWidth">
+  <div style="padding: 40px 40px 30px; border-top: 3px solid black;">
+    <app-about></app-about>
+  </div>
+</app-sliding-div>
+
+<!-- Services -->
+<app-sliding-div backgroundColor="#f2f2f2" cssClasses="fullWidth">
   <div class="listDiv">
-    <h1>My passion</h1>
-    <div class="textBox">
-      <p>Since when I've started coding with my first programming language (which I don't even remember anymore)
-      I had the chance to learn many other languages and frameworks, some during my career as a student and some because of personal interesting.
-      </p>
+    <h1>{{ 'services.title' | translate }}</h1>
+    <div id="servicesGrid">
+      <div class="service-card">
+        <span class="service-title">{{ 'services.backend_title' | translate }}</span>
+        <span class="service-desc">{{ 'services.backend_desc' | translate }}</span>
+      </div>
+      <div class="service-card">
+        <span class="service-title">{{ 'services.cloud_title' | translate }}</span>
+        <span class="service-desc">{{ 'services.cloud_desc' | translate }}</span>
+      </div>
+      <div class="service-card">
+        <span class="service-title">{{ 'services.iot_title' | translate }}</span>
+        <span class="service-desc">{{ 'services.iot_desc' | translate }}</span>
+      </div>
+      <div class="service-card">
+        <span class="service-title">{{ 'services.api_title' | translate }}</span>
+        <span class="service-desc">{{ 'services.api_desc' | translate }}</span>
+      </div>
+      <div class="service-card">
+        <span class="service-title">{{ 'services.fullstack_title' | translate }}</span>
+        <span class="service-desc">{{ 'services.fullstack_desc' | translate }}</span>
+      </div>
+      <div class="service-card">
+        <span class="service-title">{{ 'services.blockchain_title' | translate }}</span>
+        <span class="service-desc">{{ 'services.blockchain_desc' | translate }}</span>
+      </div>
     </div>
-    <mat-icon svgIcon="success"></mat-icon>
+  </div>
+</app-sliding-div>
+
+<!-- Companies -->
+<app-sliding-div backgroundColor="#ffffff" cssClasses="fullWidth">
+  <div class="listDiv">
+    <h1>{{ 'companies.title' | translate }}</h1>
+    <div id="companiesRow">
+      <div class="company-item">
+        <div class="company-logo-wrap">
+          <img src="assets/images/logos/technogym.jpg" alt="Technogym" class="company-logo">
+        </div>
+        <span class="company-name">Technogym S.p.A.</span>
+      </div>
+      <div class="company-item">
+        <div class="company-logo-wrap">
+          <img src="assets/images/logos/bonfiglioli.svg" alt="Bonfiglioli" class="company-logo">
+        </div>
+        <span class="company-name">Bonfiglioli S.p.A.</span>
+      </div>
+      <div class="company-item">
+        <div class="company-logo-wrap">
+          <img src="assets/images/logos/next.webp" alt="NeXT" class="company-logo">
+        </div>
+        <span class="company-name">NeXT S.r.l.</span>
+      </div>
+      <div class="company-item">
+        <div class="company-logo-wrap">
+          <img src="assets/images/logos/credemtel.svg" alt="Credemtel" class="company-logo">
+        </div>
+        <span class="company-name">Credemtel S.p.A.</span>
+      </div>
+    </div>
+  </div>
+</app-sliding-div>
+
+<!-- Resume CTA -->
+<div id="resumeDiv">
+  <p>{{ 'resume.prompt' | translate }}</p>
+  <a href="assets/resume/DanielePiscaglia_IT.pdf">{{ 'resume.italian' | translate }}</a>
+  <a href="assets/resume/DanielePiscaglia_EN.pdf">{{ 'resume.english' | translate }}</a>
+</div>
+
+<!-- Skills -->
+<app-sliding-div backgroundColor="#f2f2f2" cssClasses="fullWidth" id="skills">
+  <div class="listDiv">
+    <h1>{{ 'skills.title' | translate }}</h1>
+    <div class="textBox">
+      <p>{{ 'skills.summary' | translate }}</p>
+    </div>
     <div class="grid">
-      <div class="gridBox">C#</div>
+      <div class="gridBox primary">C# .NET</div>
+      <div class="gridBox primary">Node.js</div>
+      <div class="gridBox primary">Python</div>
+      <div class="gridBox primary">MongoDB</div>
+      <div class="gridBox primary">Angular</div>
       <div class="gridBox">Javascript</div>
       <div class="gridBox">CSS</div>
-      <div class="gridBox">Angular</div>
-      <div class="gridBox">Node.js</div>
-      <div class="gridBox">Java</div>
-      <div class="gridBox">Python</div>
+      <div class="gridBox">Azure</div>
+      <div class="gridBox">AWS</div>
+      <div class="gridBox">RunPod</div>
+      <div class="gridBox">Redis</div>
+      <div class="gridBox">WPF</div>
       <div class="gridBox">WebGL</div>
       <div class="gridBox">Unity</div>
-      <div class="gridBox">Spring/JEE</div>
-      <div class="gridBox">MongoDB</div>
     </div>
   </div>
 </app-sliding-div>
-<app-sliding-div backgroundColor="rgb(255, 115, 115)" cssClasses="cornered fullWidth">
+
+<!-- Academic Career -->
+<app-sliding-div backgroundColor="#ffffff" cssClasses="fullWidth">
   <div class="listDiv">
-    <h1>Academic career</h1>
+    <h1>{{ 'academic.title' | translate }}</h1>
     <ul id="schoolList">
-      <li>2015: IT expert diploma (88/100)</li>
-      <li>2018: Computer Engineer Bachelor Degree UNIBO (109/110) (<span class="link" onClick='window.open("assets/docs/tesi-triennale.pdf")'>Thesis</span>) </li>
-      <li>2020: Computer Engineer Master Degree UNIBO (110/110 with honors)</li>
+      <li>{{ 'academic.diploma' | translate }}</li>
+      <li>{{ 'academic.bachelor' | translate }} (<span class="link" onClick='window.open("assets/docs/tesi-triennale.pdf")'>Thesis</span>)</li>
+      <li>{{ 'academic.master' | translate }}</li>
     </ul>
-    <mat-icon svgIcon="certificate"></mat-icon>
-
   </div>
 </app-sliding-div>
-<app-sliding-div backgroundColor="#ffdead" cssClasses="cornered fullWidth">
+
+<!-- Employment History -->
+<app-sliding-div backgroundColor="#f2f2f2" cssClasses="fullWidth">
   <div class="listDiv">
-    <h1>Employment History</h1>
+    <h1>{{ 'work.title' | translate }}</h1>
     <ul id="workList">
-      <li>2018-2018: Intership at NeXT s.r.l. (3 months)</li>
-      <li>2020-2021: Thesis internship at Bonfiglioli s.p.a.</li>
-      <li>2021-2022: IoT Edge developer at Bonfiglioli s.p.a.</li>
-      <li>2022-2025: Software engineer at Technogym s.p.a.</li>
-      <li>Since 2025: Freelance</li>
+      <li>
+        <span class="work-years">2025 → PRESENT</span>
+        <div class="work-logo-cell"></div>
+        <div>
+          <div class="work-role work-current">Freelance Engineer</div>
+          <div class="work-company">Self-employed</div>
+        </div>
+      </li>
+      <li>
+        <span class="work-years">2022 → 2025</span>
+        <div class="work-logo-cell">
+          <img src="assets/images/logos/technogym.jpg" alt="Technogym" class="work-logo">
+        </div>
+        <div>
+          <div class="work-role">Software Engineer</div>
+          <div class="work-company">Technogym S.p.A.</div>
+        </div>
+      </li>
+      <li>
+        <span class="work-years">2021 → 2022</span>
+        <div class="work-logo-cell">
+          <img src="assets/images/logos/bonfiglioli.svg" alt="Bonfiglioli" class="work-logo">
+        </div>
+        <div>
+          <div class="work-role">IoT Edge Developer</div>
+          <div class="work-company">Bonfiglioli S.p.A.</div>
+        </div>
+      </li>
+      <li>
+        <span class="work-years">2020 → 2021</span>
+        <div class="work-logo-cell">
+          <img src="assets/images/logos/bonfiglioli.svg" alt="Bonfiglioli" class="work-logo">
+        </div>
+        <div>
+          <div class="work-role">Thesis Internship</div>
+          <div class="work-company">Bonfiglioli S.p.A.</div>
+        </div>
+      </li>
+      <li>
+        <span class="work-years">2018</span>
+        <div class="work-logo-cell">
+          <img src="assets/images/logos/next.webp" alt="NeXT" class="work-logo">
+        </div>
+        <div>
+          <div class="work-role">Internship</div>
+          <div class="work-company">NeXT S.r.l. (3 months)</div>
+        </div>
+      </li>
     </ul>
-    <mat-icon svgIcon="briefcase"></mat-icon>
-
   </div>
 </app-sliding-div>
-<app-sliding-div backgroundColor="rgb(189, 255, 173)" cssClasses="cornered fullWidth">
+
+<!-- Projects -->
+<app-sliding-div backgroundColor="#ffffff" cssClasses="fullWidth">
   <div class="listDiv">
-    <h1>My projects</h1>
+    <h1>{{ 'projects.title' | translate }}</h1>
     <ul id="projectList">
-      <li onClick='window.open("https://github.com/danipisca07/iota-supply-tracer")'><mat-icon svgIcon="iota"></mat-icon> Iota Supply Tracer</li>
-      <li onClick='window.open("assets/docs/bft-fabric.pdf")'><mat-icon svgIcon="pdf"></mat-icon> BFT consensus in Hyperledger Fabric (ITA)</li>
-      <li onClick='window.open("assets/docs/confronto-consensus.pdf")'><mat-icon svgIcon="pdf"></mat-icon> Consensus mechanisms in blockchains (ITA)</li>
-      <li onClick='window.open("https://www.amazon.it/Pisca-Studio-Crazy-Cyclist/dp/B016YOIKWK")'><mat-icon svgIcon="android"></mat-icon> CrazyCyclist Mobile Game</li>
-      <li onClick='window.open("http://www.piscagliacostruzioni.it")'><mat-icon svgIcon="html5"></mat-icon> Piscaglia Costruzioni Website</li>
-      <li onClick='window.open("https://github.com/danipisca07/Modeling4Cloud")'><mat-icon svgIcon="cloud"></mat-icon> Modeling4Cloud, monitor/benchmark for cloud services</li>
-      <li onClick='window.open("http://www.dreamsracing.net")'><mat-icon svgIcon="html5"></mat-icon> Dreams Racing Website</li>
-      <li onClick='window.open("https://github.com/danipisca07/ListaBot")'><mat-icon svgIcon="telegram"></mat-icon> ListaBot, Heroku template for telegram bots</li>
-      <li onClick='window.open("https://github.com/danipisca07/")'><mat-icon svgIcon="github2"></mat-icon> Others...</li>
+      <li onClick='window.open("https://airchitetto.org")'>
+        <span class="project-name">AIRchitetto</span>
+        <span class="project-desc">Generative AI SaaS platform for architectural  and interior design.</span>
+      </li>
+      <li onClick='window.open("https://github.com/danipisca07/iota-supply-tracer")'>
+        <span class="project-name">IOTA Supply Tracer</span>
+        <span class="project-desc">Blockchain-based supply chain tracing using the IOTA distributed ledger.</span>
+      </li>
+      <li onClick='window.open("https://github.com/danipisca07/Modeling4Cloud")'>
+        <span class="project-name">Modeling4Cloud</span>
+        <span class="project-desc">Monitor and benchmark tool for cloud services performance modeling.</span>
+      </li>
+      <li onClick='window.open("assets/docs/bft-fabric.pdf")'>
+        <span class="project-name">BFT in Hyperledger Fabric</span>
+        <span class="project-desc">Research paper on Byzantine Fault Tolerance consensus in Hyperledger Fabric.</span>
+      </li>
+      <li onClick='window.open("assets/docs/confronto-consensus.pdf")'>
+        <span class="project-name">Blockchain Consensus Mechanisms</span>
+        <span class="project-desc">Comparative analysis of consensus algorithms across major blockchain protocols.</span>
+      </li>
+      <li onClick='window.open("https://github.com/danipisca07/ListaBot")'>
+        <span class="project-name">ListaBot</span>
+        <span class="project-desc">Heroku template for rapidly deploying Telegram bots with list management.</span>
+      </li>
+      <li onClick='window.open("http://www.piscagliacostruzioni.it")'>
+        <span class="project-name">Piscaglia Costruzioni Website</span>
+        <span class="project-desc">Corporate website for a construction company.</span>
+      </li>
+      <li onClick='window.open("https://github.com/danipisca07/")'>
+        <span class="project-name">{{ 'projects.github_more' | translate }}</span>
+        <span class="project-desc">{{ 'projects.github_more_desc' | translate }}</span>
+      </li>
     </ul>
-    <mat-icon svgIcon="tasks"></mat-icon>
   </div>
 </app-sliding-div>
-<app-sliding-div backgroundColor="#B986FC" cssClasses="cornered fullWidth">
-  <div class="listDiv">
-    <h1>Sports</h1>
-    <p class="textBox">Outside everything that is connected with a computer, my main passion is having fun on a jet-ski.
-      This passion has been passed on to me by my father and my brother! I currently race in nationals
-      and internationals championships.</p>
-    <mat-icon svgIcon="medal"></mat-icon>
-    <ul class="hiddenUl">
-      <li><mat-icon svgIcon="winner"></mat-icon> 2017 Italian Champion Ski F2</li>
-      <li><mat-icon svgIcon="winner"></mat-icon> 2019/2020/2021/2023 Italian Champion Ski F1</li>
-    </ul>
-  </div>
-</app-sliding-div>
-<app-footer></app-footer>
 
+<app-footer></app-footer>

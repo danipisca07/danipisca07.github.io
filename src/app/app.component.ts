@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MatIconRegistry} from "@angular/material/icon";
 import {DomSanitizer} from "@angular/platform-browser";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,28 @@ export class AppComponent {
   title = 'danipisca07-website';
 
   constructor(private matIconRegistry: MatIconRegistry,
-              private domSanitizer: DomSanitizer){
+              private domSanitizer: DomSanitizer,
+              private translate: TranslateService){
+    translate.addLangs(['it', 'en']);
+    translate.setDefaultLang('it');
+    // URL path takes priority: /en or /en/* → English, otherwise stored preference or Italian
+    const isEnPath = window.location.pathname.startsWith('/en');
+    const saved = localStorage.getItem('lang');
+    const lang = isEnPath ? 'en' : (saved ?? 'it');
+    translate.use(lang);
     this.loadSocialSvgIcons();
     this.loadPremiumSvgIcons();
     this.loadOtherIcons();
+  }
+
+  toggleLanguage(): void {
+    const next = this.translate.currentLang === 'it' ? 'en' : 'it';
+    this.translate.use(next);
+    localStorage.setItem('lang', next);
+  }
+
+  get currentLang(): string {
+    return this.translate.currentLang;
   }
 
   loadSocialSvgIcons(){

@@ -1,79 +1,138 @@
 @import "../variables.scss";
 
-#backgroundWebGL {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  border: none;
-  z-index: 0;
-}
-
-.landing-container{
-  position:relative;
-  scroll-snap-type: y mandatory;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  //background: $backColor;
+.landing-container {
+  position: relative;
   width: 100vw;
   max-width: 100%;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #000;
+}
 
-  .banner{
-    position: relative;
-    z-index: 2;
-    border: solid 2px black;
-    border-radius: 20px;
-    font-family: 'Baloo Tamma 2', cursive;
-    color: $darkTextColor;
-    background: $elementColor;
-    text-align: center;
-    padding: 0px 15px;
-    display: inline-block;
-  }
+#heroCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
 
-  .image {
-    position:relative;
-    z-index: 1;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 8vw;
+  gap: 40px;
+  box-sizing: border-box;
+}
 
-    .placeholder, .colorImg {
-      max-height: 60vh;
-      max-width: 65vw;
-    }
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-    .placeholder{
-      z-index: 2;
-    }
+.hero-name {
+  font-family: $headingFont, sans-serif;
+  font-weight: 900;
+  font-size: clamp(3em, 8vw, 7em);
+  color: #fff;
+  margin: 0;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+}
 
-    .colorImg {
-      opacity: 100%;
-      position: absolute;
-      left: 0px;
-      top:0px;
-    }
+.hero-tagline {
+  font-family: $mainFont;
+  font-size: clamp(0.55em, 1.2vw, 0.85em);
+  color: #aaa;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 
-    #colore{
-      z-index: 0;
-    }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
 
-    #bordi{
-      z-index: 1;
-    }
+.hero-cta-primary {
+  font-family: $mainFont;
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 12px 28px;
+  border: 2px solid $accentColor;
+  background: $accentColor;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.1s, color 0.1s;
+
+  &:hover {
+    background: transparent;
+    color: $accentColor;
   }
 }
 
-@media (max-width: 365px){
-  .banner{
-    font-size: 1.5em;
+.hero-cta-secondary {
+  font-family: $mainFont;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  &:hover {
+    color: $accentColor;
   }
 }
-@media (min-width: 366px){
- .banner{
-   font-size: 2em;
- }
+
+.hero-right {
+  flex-shrink: 0;
 }
 
+.hero-role-box {
+  border: 3px solid #fff;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  span {
+    font-family: $headingFont, sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.5em, 3.5vw, 2.8em);
+    color: #fff;
+    line-height: 105%;
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 6vw;
+    gap: 24px;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .hero-name {
+    font-size: clamp(2.5em, 12vw, 4em);
+  }
+}

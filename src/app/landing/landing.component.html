@@ -1,19 +1,21 @@
-<!-- TODO: https://codepen.io/snippy_valson/pen/xVJeQB Press enter to continue home-->
-
-
 <div class="landing-container">
-  <iframe id="backgroundWebGL" src="assets/backgroundSquares.html"></iframe>
-  <div class="image">
+  <canvas #heroCanvas id="heroCanvas"></canvas>
 
-    <img id="colore" class="colorImg" [style.transform]=translateL src="assets/images/color.png" />
-    <img class="placeholder" src="assets/images/placeholder.png"/>
-    <img id="bordi" class="colorImg" [style.transform]=translateR src="assets/images/bordi.png" />
-
-
-    <!--<img id="rosso" class="colorImg" *ngIf="!cursorCentered" [style.transform]=traslateL src="assets/images/rosso.png" />
-    <img id="verde" class="colorImg" *ngIf="!cursorCentered" src="assets/images/verde.png" />
-    <img id="blu" class="colorImg" *ngIf="!cursorCentered" [style.display]=!cursorCentered [style.transform]=traslateB src="assets/images/blu.png" />-->
+  <div class="hero-content">
+    <div class="hero-left">
+      <h1 class="hero-name">DANIELE<br>PISCAGLIA</h1>
+      <p class="hero-tagline">{{ 'hero.tagline' | translate }}</p>
+      <div class="hero-actions">
+        <a href="mailto:danielepiscagliasw@gmail.com" class="hero-cta-primary">{{ 'hero.hire' | translate }}</a>
+        <a href="#skills" class="hero-cta-secondary">{{ 'hero.see_work' | translate }}</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-role-box">
+        <span>BACKEND /</span>
+        <span>FULLSTACK</span>
+        <span>ENGINEER</span>
+      </div>
+    </div>
   </div>
-  <div class="banner">I'm Daniele, welcome to my (somewhat) awesome site!</div>
 </div>
-

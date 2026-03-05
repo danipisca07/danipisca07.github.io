@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "tagline": "6 ANNI DI ESPERIENZA · DISPONIBILE PER PROGETTI",
+    "hire": "CONTATTAMI",
+    "see_work": "↓ Scopri il mio lavoro"
+  },
+  "about": {
+    "title": "Chi sono",
+    "who": "Chi",
+    "role_label": "Ruolo",
+    "role_value": "Ingegnere Backend / Fullstack",
+    "experience_label": "Esperienza",
+    "experience_value": "6+ Anni",
+    "education_label": "Formazione",
+    "education_value": "Laurea Magistrale Ingegneria Informatica — 110/110 con Lode (UNIBO)",
+    "location_label": "Sede",
+    "location_value": "Italia · Disponibile da remoto",
+    "focus_label": "Specializzazioni",
+    "focus_value": "Backend · Cloud · API · IoT · Blockchain",
+    "hobby_label": "Hobby",
+    "hobby_value": "Moto d'acqua · Pluri-Campione Italiano"
+  },
+  "services": {
+    "title": "Servizi",
+    "backend_title": "Sviluppo Backend",
+    "backend_desc": "API REST scalabili, microservizi e logica server-side in C#, Node.js e Python.",
+    "cloud_title": "Architettura Cloud",
+    "cloud_desc": "Progettazione e deployment di soluzioni cloud-native su AWS, Azure o GCP.",
+    "iot_title": "IoT & Edge",
+    "iot_desc": "Sistemi di edge computing, protocolli di comunicazione dispositivi e integrazioni IoT industriali.",
+    "api_title": "Design API & Integrazioni",
+    "api_desc": "Specifiche API, integrazioni di terze parti, flussi di autenticazione e tooling per sviluppatori.",
+    "fullstack_title": "Sviluppo Fullstack",
+    "fullstack_desc": "Applicazioni web end-to-end con Angular, abbinate a robusti servizi backend.",
+    "blockchain_title": "Blockchain & Web3",
+    "blockchain_desc": "Soluzioni su distributed ledger con IOTA e Hyperledger Fabric per supply chain e tracciamento dati."
+  },
+  "companies": {
+    "title": "Aziende con cui ho collaborato"
+  },
+  "resume": {
+    "prompt": "Vuoi saperne di più? Scarica il mio CV:",
+    "italian": "CV Italiano",
+    "english": "CV Inglese"
+  },
+  "skills": {
+    "title": "Competenze Tecniche",
+    "summary": "6 anni a costruire sistemi backend, API e servizi cloud in ambito IoT, fitness-tech e blockchain."
+  },
+  "academic": {
+    "title": "Carriera Accademica",
+    "diploma": "2015 — Diploma perito informatico (88/100)",
+    "bachelor": "2018 — Laurea Triennale Ingegneria Informatica · UNIBO (109/110)",
+    "master": "2020 — Laurea Magistrale Ingegneria Informatica · UNIBO (110/110 con Lode)"
+  },
+  "work": {
+    "title": "Esperienza Lavorativa"
+  },
+  "projects": {
+    "title": "Progetti",
+    "github_more": "Altro su GitHub",
+    "github_more_desc": "Visualizza tutti i repository pubblici e i contributi open-source."
+  },
+  "footer": {
+    "available": "DISPONIBILE PER FREELANCE"
+  },
+  "lang": {
+    "toggle": "EN"
+  }
+}
