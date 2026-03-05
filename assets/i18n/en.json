@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "tagline": "6 YEARS EXPERIENCE · AVAILABLE FOR HIRE",
+    "hire": "HIRE ME",
+    "see_work": "↓ See my work"
+  },
+  "about": {
+    "title": "About",
+    "who": "WHO",
+    "role_label": "ROLE",
+    "role_value": "Backend / Fullstack Engineer",
+    "experience_label": "EXPERIENCE",
+    "experience_value": "6+ Years",
+    "education_label": "EDUCATION",
+    "education_value": "MSc Computer Engineering — 110/110 with Honors (UNIBO)",
+    "location_label": "LOCATION",
+    "location_value": "Italy · Remote-friendly",
+    "focus_label": "FOCUS",
+    "focus_value": "Backend · Cloud · APIs · IoT · Blockchain",
+    "hobby_label": "HOBBY",
+    "hobby_value": "Jet-ski · Italian Champion F1 (2019 / 2020 / 2021 / 2023)"
+  },
+  "services": {
+    "title": "Services",
+    "backend_title": "Backend Development",
+    "backend_desc": "Scalable REST and gRPC APIs, microservices, server-side logic in C#, Node.js, and Python.",
+    "cloud_title": "Cloud Architecture",
+    "cloud_desc": "Design and deployment of cloud-native solutions on AWS, Azure, or GCP. Infrastructure as code.",
+    "iot_title": "IoT & Edge",
+    "iot_desc": "Edge computing systems, device communication protocols, and industrial IoT integrations.",
+    "api_title": "API Design & Integration",
+    "api_desc": "API specification, third-party integrations, authentication flows, and developer tooling.",
+    "fullstack_title": "Fullstack Development",
+    "fullstack_desc": "End-to-end web apps with Angular, paired with robust backend services.",
+    "blockchain_title": "Blockchain & Web3",
+    "blockchain_desc": "Distributed ledger solutions using IOTA and Hyperledger Fabric for supply chain and data tracing."
+  },
+  "companies": {
+    "title": "Companies I've Worked With"
+  },
+  "resume": {
+    "prompt": "Want to know more? Download my resume:",
+    "italian": "Italian CV",
+    "english": "English CV"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "summary": "6 years building backend systems, APIs, and cloud services across IoT, fitness-tech, and blockchain."
+  },
+  "academic": {
+    "title": "Academic Career",
+    "diploma": "2015 — IT expert diploma (88/100)",
+    "bachelor": "2018 — Computer Engineering Bachelor · UNIBO (109/110)",
+    "master": "2020 — Computer Engineering Master · UNIBO (110/110 with honors)"
+  },
+  "work": {
+    "title": "Employment History"
+  },
+  "projects": {
+    "title": "Projects",
+    "github_more": "More on GitHub",
+    "github_more_desc": "View all public repositories and open-source contributions."
+  },
+  "footer": {
+    "available": "AVAILABLE FOR FREELANCE"
+  },
+  "lang": {
+    "toggle": "IT"
+  }
+}
