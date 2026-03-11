@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F24 PDF Splitter — Dividi e organizza gli F24 in automatico</title>
+    <meta name="description" content="Software per commercialisti: dividi automaticamente i PDF con più F24 e organizzali per contribuente. Risparmia ore di lavoro manuale.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a365d;
+            --blue: #2b6cb0;
+            --green: #48bb78;
+            --green-hover: #38a169;
+            --gray-bg: #f7fafc;
+            --gray-text: #718096;
+            --gray-light: #a0aec0;
+            --text: #2d3748;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; line-height: 1.3; }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* CTA Button */
+        .cta {
+            display: inline-block;
+            background: var(--green);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .cta:hover { background: var(--green-hover); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: var(--navy);
+            color: #fff;
+            padding: 5rem 0 4rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .hero .subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e0;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .hero .price-note {
+            margin-top: 1rem;
+            color: var(--gray-light);
+            font-size: 0.95rem;
+        }
+        .hero .price-note span {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        /* Hero image placeholder */
+        .hero-image {
+            max-width: 600px;
+            margin: 2.5rem auto 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== PAIN POINTS ===== */
+        .pain {
+            padding: 4rem 0;
+        }
+        .pain h2 {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .pain-list {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .pain-list li {
+            font-style: italic;
+            color: var(--gray-text);
+            padding: 0.8rem 0 0.8rem 1.5rem;
+            border-left: 3px solid var(--blue);
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        /* ===== COME FUNZIONA ===== */
+        .how {
+            background: var(--gray-bg);
+            padding: 4rem 0;
+        }
+        .how h2 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 2.5rem;
+        }
+        .steps {
+            display: flex;
+            gap: 2rem;
+            text-align: center;
+        }
+        .step {
+            flex: 1;
+        }
+        .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .step h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+        .step p {
+            font-size: 0.95rem;
+            color: var(--gray-text);
+        }
+
+        /* Step image placeholders */
+        .step-image {
+            margin: 1rem auto 0;
+            max-width: 220px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .step-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== DEMO VIDEO ===== */
+        .demo {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .demo h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        .demo p {
+            color: var(--gray-text);
+            margin-bottom: 2rem;
+        }
+        .demo-video {
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        .demo-video video, .demo-video img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== BENEFITS ===== */
+        .benefits {
+            background: var(--gray-bg);
+            padding: 4rem 0;
+        }
+        .benefits h2 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 2.5rem;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .benefit {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .benefit-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .benefit h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+        .benefit p {
+            font-size: 0.92rem;
+            color: var(--gray-text);
+        }
+
+        /* ===== PRICING ===== */
+        .pricing {
+            background: var(--navy);
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .pricing h2 {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+        .price-card {
+            display: inline-block;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 2rem 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .price-old {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            color: var(--gray-light);
+        }
+        .price-current {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--green);
+            font-family: 'Poppins', sans-serif;
+        }
+        .price-detail {
+            color: #cbd5e0;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+        .urgency {
+            color: #cbd5e0;
+            font-size: 0.95rem;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+
+        /* ===== REQUIREMENTS ===== */
+        .requirements {
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .requirements h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        .requirements p {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--navy);
+            color: var(--gray-light);
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        footer a { color: #cbd5e0; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero .subtitle { font-size: 1rem; }
+            .steps { flex-direction: column; gap: 2rem; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .price-card { padding: 1.5rem 2rem; }
+            .price-current { font-size: 2.5rem; }
+            .cta { padding: 0.9rem 2rem; font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>Basta perdere ore a dividere gli F24.</h1>
+        <p class="subtitle">Carica il PDF, trascina e rilascia. In pochi secondi ogni F24 è nella cartella giusta, rinominato per contribuente.</p>
+        <a class="cta" href="mailto:danielepiscagliasw@gmail.com?subject=Licenza%20F24%20PDF%20Splitter&body=Buongiorno%2C%0A%0AVorrei%20acquistare%20una%20licenza%20di%20F24%20PDF%20Splitter%20al%20prezzo%20di%20lancio%20(25%20%E2%82%AC).%0A%0ANome%3A%20%0AStudio%3A%20%0AP.IVA%3A%20%0A%0AGrazie">Richiedi la licenza — 25 €</a>
+        <p class="price-note">Prezzo di lancio <span>50%</span> · Poi 50 €</p>
+
+        <!-- PLACEHOLDER: Hero screenshot -->
+        <div class="hero-image">
+            <img src="assets/hero-screenshot.png" alt="F24 PDF Splitter — Schermata principale">
+        </div>
+    </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="pain">
+    <div class="container">
+        <h2>Lo conosci bene questo scenario</h2>
+        <ul class="pain-list">
+            <li>"Ogni mese, lo stesso PDF da 80 pagine. Ogni pagina un contribuente diverso."</li>
+            <li>"Apri, rinomina, sposta nella cartella giusta. Per ognuno. Ogni volta."</li>
+            <li>"Un errore di copia e il file finisce nel fascicolo sbagliato."</li>
+            <li>"E quando le scadenze si accumulano, il tempo non basta mai."</li>
+        </ul>
+    </div>
+</section>
+
+<!-- COME FUNZIONA -->
+<section class="how">
+    <div class="container">
+        <h2>Come funziona</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Trascina il PDF</h3>
+                <p>Carica il file con tutti gli F24. Anche centinaia di pagine.</p>
+                <!-- PLACEHOLDER: Step 1 screenshot -->
+                <div class="step-image">
+                    <img src="assets/step-1-drag.png" alt="Trascinamento del PDF nell'applicazione">
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>Identificazione automatica</h3>
+                <p>Il software legge ogni pagina e identifica contribuente e codice fiscale.</p>
+                <!-- PLACEHOLDER: Step 2 screenshot -->
+                <div class="step-image">
+                    <img src="assets/step-2-processing.png" alt="Elaborazione in corso">
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Tutto organizzato</h3>
+                <p>Ogni F24 viene salvato nella cartella del contribuente, con il nome che preferisci.</p>
+                <!-- PLACEHOLDER: Step 3 screenshot -->
+                <div class="step-image">
+                    <img src="assets/step-3-result.png" alt="File organizzati nelle cartelle">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DEMO VIDEO -->
+<section class="demo">
+    <div class="container">
+        <h2>Guardalo in azione</h2>
+        <p>Da un PDF di 50 pagine a 50 file organizzati. In pochi secondi.</p>
+        <!-- PLACEHOLDER: Demo video -->
+        <div class="demo-video">
+            <video controls poster="assets/hero-screenshot.png">
+                <source src="assets/demo.mp4" type="video/mp4">
+                Il tuo browser non supporta il video.
+            </video>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+    <div class="container">
+        <h2>Perché scegliere F24 PDF Splitter</h2>
+        <div class="benefits-grid">
+            <div class="benefit">
+                <div class="benefit-icon">⏱</div>
+                <h3>Ore risparmiate</h3>
+                <p>Un PDF da 100 pagine? Diviso in 10 secondi, non in 2 ore.</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">✓</div>
+                <h3>Zero errori</h3>
+                <p>Il software legge il codice fiscale. Nessun file nella cartella sbagliata.</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">🔒</div>
+                <h3>Completamente offline</h3>
+                <p>I dati dei tuoi clienti restano nel tuo studio. Sempre. Nessun cloud, nessun account.</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">📁</div>
+                <h3>Salva ovunque</h3>
+                <p>Disco locale, NAS o cartella di rete. Tu scegli dove salvare.</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">⚙</div>
+                <h3>Configurabile</h3>
+                <p>Scegli tu il formato del nome file e la struttura delle cartelle.</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">🛡</div>
+                <h3>Nulla va perso</h3>
+                <p>Se una pagina non è leggibile, finisce in una cartella apposita per la revisione manuale.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+    <div class="container">
+        <h2>Prezzo di lancio</h2>
+        <div class="price-card">
+            <div class="price-old">50 €</div>
+            <div class="price-current">25 €</div>
+            <p class="price-detail">Licenza singola · Una tantum, nessun abbonamento</p>
+        </div>
+        <p class="urgency">Il prezzo di lancio è riservato ai primi acquirenti. Quando sarà finita la fase di lancio, il prezzo tornerà a 50 €.</p>
+        <a class="cta" href="mailto:danielepiscagliasw@gmail.com?subject=Licenza%20F24%20PDF%20Splitter&body=Buongiorno%2C%0A%0AVorrei%20acquistare%20una%20licenza%20di%20F24%20PDF%20Splitter%20al%20prezzo%20di%20lancio%20(25%20%E2%82%AC).%0A%0ANome%3A%20%0AStudio%3A%20%0AP.IVA%3A%20%0A%0AGrazie">Acquista ora</a>
+    </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section class="requirements">
+    <div class="container">
+        <h2>Requisiti</h2>
+        <p>Windows 10 o successivo · Nessuna connessione internet necessaria</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>Hai domande? <a href="mailto:danielepiscagliasw@gmail.com">danielepiscagliasw@gmail.com</a></p>
+        <p style="margin-top: 0.5rem;">© 2026 Daniele Piscaglia</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -27,7 +27,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "src/assets/products/F24_PDF_Splitter",
+                "output": "/f24_pdf_splitter"
+              }
             ],
             "styles": [
               "src/styles.scss"
