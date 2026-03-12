@@ -4,6 +4,9 @@
   <li *ngFor="let post of posts" [routerLink]="['/blog', post.slug]">
     <span class="post-name">{{ post.title }}</span>
     <span class="post-desc">{{ post.excerpt }}</span>
+    <div *ngIf="post.image" class="post-image-wrap">
+      <img [src]="'assets/blog/' + post.image" [alt]="post.title" class="post-image" />
+    </div>
   </li>
 </ul>
 <a routerLink="/blog" class="view-all-link">{{ 'blog.view_all' | translate }}</a>

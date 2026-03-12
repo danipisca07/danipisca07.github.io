@@ -1,8 +1,13 @@
 @import "../../variables.scss";
 
+:host {
+  display: flex;
+  flex: 1;
+}
+
 .blog-page {
   background: #fff;
-  min-height: 60vh;
+  flex: 1;
   border-top: solid 3px black;
   padding: 40px 20px 40px;
   display: flex;
