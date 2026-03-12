@@ -2,6 +2,8 @@
 
 > 🤖 **This guide is written for AI coding agents.** If you are Claude Code or a similar agent: read this document in full before writing any code. Follow each step in order. Where instructions say "ask the user", stop and ask before proceeding.
 
+If you are a human and you want more context you can read more here: [Medium post](https://medium.com/@danielepiscaglia/automate-any-android-app-on-an-emulator-with-python-af16e5b99874)
+
 ***
 
 ## Prerequisites
