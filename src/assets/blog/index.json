@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello World",
+    "date": "2026-03-12",
+    "excerpt": "The first post on this blog — a quick introduction to what I plan to write about."
+  },
+  {
+    "slug": "android-ui-ai-automation",
+    "title": "Android UI automation with AI and python",
+    "date": "2026-03-12",
+    "excerpt": "Automating UI interaction on any android app using python and AI (and sniffing API calls if you want to)."
+  }
+]

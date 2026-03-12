@@ -1,0 +1,92 @@
+@import "../../variables.scss";
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+// Mirrors .listDiv h1 from app.component.scss (can't pierce component boundary)
+h1 {
+  width: 100%;
+  margin: 0 0 20px;
+  font-weight: 900;
+  font-family: $headingFont;
+  font-size: 2em;
+  text-transform: uppercase;
+  border-left: 6px solid $accentColor;
+  padding-left: 12px;
+  line-height: 100%;
+}
+
+.lang-disclaimer {
+  font-family: $mainFont;
+  font-size: 0.65em;
+  color: #888;
+  margin: -14px 0 16px;
+  width: 100%;
+}
+
+// Mirrors #projectList from app.component.scss exactly
+#blogPreviewList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    border: 2px solid #000;
+    padding: 16px;
+    cursor: pointer;
+    transition: background 0.08s, color 0.08s;
+    text-align: left;
+
+    .post-name {
+      font-family: $headingFont;
+      font-weight: 700;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .post-desc {
+      font-family: $mainFont;
+      font-size: 0.65em;
+      color: #555;
+      margin-top: 4px;
+      display: block;
+    }
+  }
+
+  li:hover {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+
+    .post-desc {
+      color: #ccc;
+    }
+  }
+}
+
+.view-all-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: $mainFont;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: $accentColor;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 550px) {
+  #blogPreviewList {
+    grid-template-columns: 1fr;
+  }
+}

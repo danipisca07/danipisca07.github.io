@@ -17,10 +17,14 @@ import { LandingComponent } from './landing/landing.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { SlidingDivComponent } from './sliding-div/sliding-div.component';
+import { BlogListComponent } from './blog/blog-list/blog-list.component';
+import { BlogPostComponent } from './blog/blog-post/blog-post.component';
+import { BlogPreviewComponent } from './blog/blog-preview/blog-preview.component';
 import {InViewportModule} from "ng-in-viewport";
 import {Ng2FittextModule} from "ng2-fittext";
 import {TranslateModule, TranslateLoader} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import { MarkdownModule } from 'ngx-markdown';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -35,7 +39,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     LandingComponent,
     AboutComponent,
     FooterComponent,
-    SlidingDivComponent
+    SlidingDivComponent,
+    BlogListComponent,
+    BlogPostComponent,
+    BlogPreviewComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     InViewportModule,
     Ng2FittextModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
     TranslateModule.forRoot({
       defaultLanguage: 'it',
       loader: {

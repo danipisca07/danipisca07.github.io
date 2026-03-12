@@ -1,0 +1,120 @@
+@import "../../variables.scss";
+
+.blog-page {
+  background: #fff;
+  min-height: 60vh;
+  border-top: solid 3px black;
+  padding: 40px 20px 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-family: $mainFont;
+
+  @media (min-width: 551px) {
+    padding: 40px 40px 40px;
+  }
+}
+
+h1 {
+  width: 100%;
+  margin: 0 0 20px;
+  font-weight: 900;
+  font-family: $headingFont;
+  font-size: 2em;
+  text-transform: uppercase;
+  border-left: 6px solid $accentColor;
+  padding-left: 12px;
+  line-height: 100%;
+}
+
+.back-link {
+  width: 100%;
+  font-family: $mainFont;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: $accentColor;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#blogList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  li {
+    list-style: none;
+    border: 2px solid #000;
+    padding: 20px 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: background 0.08s, color 0.08s;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 16px;
+
+    .post-title {
+      font-family: $headingFont;
+      font-weight: 700;
+      font-size: 0.95em;
+      text-transform: uppercase;
+      display: block;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .post-date {
+      font-family: $mainFont;
+      font-size: 0.65em;
+      color: #666;
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+      white-space: nowrap;
+    }
+
+    .post-excerpt {
+      font-family: $mainFont;
+      font-size: 0.7em;
+      color: #555;
+      margin-top: 6px;
+      display: block;
+      grid-column: 1 / 3;
+      grid-row: 2;
+      line-height: 140%;
+    }
+
+    .post-read-more {
+      font-family: $mainFont;
+      font-size: 0.65em;
+      color: $accentColor;
+      margin-top: 10px;
+      display: block;
+      grid-column: 1 / 3;
+      grid-row: 3;
+      font-weight: 700;
+    }
+
+    &:hover {
+      background: #000;
+      color: #fff;
+
+      .post-date,
+      .post-excerpt {
+        color: #ccc;
+      }
+
+      .post-read-more {
+        color: $accentColor;
+      }
+    }
+  }
+}

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {MatIconRegistry} from "@angular/material/icon";
 import {DomSanitizer} from "@angular/platform-browser";
 import {TranslateService} from "@ngx-translate/core";
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +12,17 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class AppComponent {
   title = 'danipisca07-website';
+  isBlogRoute = false;
 
   constructor(private matIconRegistry: MatIconRegistry,
               private domSanitizer: DomSanitizer,
-              private translate: TranslateService){
+              private translate: TranslateService,
+              private router: Router){
+    this.router.events.pipe(
+      filter(e => e instanceof NavigationEnd)
+    ).subscribe((e: any) => {
+      this.isBlogRoute = e.urlAfterRedirects.startsWith('/blog');
+    });
     translate.addLangs(['it', 'en']);
     translate.setDefaultLang('it');
     // URL path takes priority: /en or /en/* → English, otherwise stored preference or Italian

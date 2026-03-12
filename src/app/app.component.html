@@ -1,5 +1,6 @@
-<app-landing></app-landing>
 <app-header></app-header>
+<ng-container *ngIf="!isBlogRoute">
+<app-landing></app-landing>
 
 <!-- About -->
 <app-sliding-div backgroundColor="#ffffff" cssClasses="fullWidth">
@@ -104,6 +105,13 @@
       <div class="gridBox">WebGL</div>
       <div class="gridBox">Unity</div>
     </div>
+  </div>
+</app-sliding-div>
+
+<!-- Blog Preview -->
+<app-sliding-div backgroundColor="#f2f2f2" cssClasses="fullWidth">
+  <div class="listDiv">
+    <app-blog-preview></app-blog-preview>
   </div>
 </app-sliding-div>
 
@@ -217,4 +225,6 @@
   </div>
 </app-sliding-div>
 
+</ng-container>
+<router-outlet></router-outlet>
 <app-footer></app-footer>

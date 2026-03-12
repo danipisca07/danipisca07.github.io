@@ -2,7 +2,8 @@
   "hero": {
     "tagline": "6 YEARS EXPERIENCE · AVAILABLE FOR HIRE",
     "hire": "HIRE ME",
-    "see_work": "↓ See my work"
+    "see_work": "↓ See my work",
+    "blog": "Read the Blog"
   },
   "about": {
     "title": "About",
@@ -60,6 +61,14 @@
     "title": "Projects",
     "github_more": "More on GitHub",
     "github_more_desc": "View all public repositories and open-source contributions."
+  },
+  "blog": {
+    "preview_title": "Latest Articles",
+    "lang_disclaimer": "Blog posts are in English only.",
+    "read_more": "Read more →",
+    "view_all": "View all posts →",
+    "back_home": "← Back to Home",
+    "back_list": "← Back to Blog"
   },
   "footer": {
     "available": "AVAILABLE FOR FREELANCE"

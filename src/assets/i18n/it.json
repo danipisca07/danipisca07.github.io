@@ -2,7 +2,8 @@
   "hero": {
     "tagline": "6 ANNI DI ESPERIENZA · DISPONIBILE PER PROGETTI",
     "hire": "CONTATTAMI",
-    "see_work": "↓ Scopri il mio lavoro"
+    "see_work": "↓ Scopri il mio lavoro",
+    "blog": "Vai al Blog"
   },
   "about": {
     "title": "Chi sono",
@@ -60,6 +61,14 @@
     "title": "Progetti",
     "github_more": "Altro su GitHub",
     "github_more_desc": "Visualizza tutti i repository pubblici e i contributi open-source."
+  },
+  "blog": {
+    "preview_title": "Ultimi Articoli",
+    "lang_disclaimer": "Gli articoli del blog sono solo in inglese.",
+    "read_more": "Leggi →",
+    "view_all": "Vedi tutti →",
+    "back_home": "← Torna alla Home",
+    "back_list": "← Torna al Blog"
   },
   "footer": {
     "available": "DISPONIBILE PER FREELANCE"

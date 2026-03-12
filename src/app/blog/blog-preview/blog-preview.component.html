@@ -1,0 +1,9 @@
+<h1>{{ 'blog.preview_title' | translate }}</h1>
+<p class="lang-disclaimer">&#9432; {{ 'blog.lang_disclaimer' | translate }}</p>
+<ul id="blogPreviewList">
+  <li *ngFor="let post of posts" [routerLink]="['/blog', post.slug]">
+    <span class="post-name">{{ post.title }}</span>
+    <span class="post-desc">{{ post.excerpt }}</span>
+  </li>
+</ul>
+<a routerLink="/blog" class="view-all-link">{{ 'blog.view_all' | translate }}</a>
