@@ -59,6 +59,7 @@
   },
   "projects": {
     "title": "Progetti",
+    "f24_splitter_desc": "Tool di separazione e organizzazione moduli F24 per commercialisti",
     "github_more": "Altro su GitHub",
     "github_more_desc": "Visualizza tutti i repository pubblici e i contributi open-source."
   },
