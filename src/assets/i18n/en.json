@@ -59,6 +59,7 @@
   },
   "projects": {
     "title": "Projects",
+    "f24_splitter_desc": "Local tool for splitting and organizing multi-page PDF documents by section.",
     "github_more": "More on GitHub",
     "github_more_desc": "View all public repositories and open-source contributions."
   },
