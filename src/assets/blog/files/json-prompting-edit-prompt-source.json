@@ -1,0 +1,67 @@
+{
+  "people": [
+    {
+      "id": "person_central_real",
+      "position": "center-left, foreground",
+      "clothing": "black and white vertically striped long-sleeve shirt, dark blue jeans, black shoes",
+      "pose": "walking away from the camera, carrying a black shoulder bag on the right shoulder and two translucent white plastic shopping bags in the left hand",
+      "visible_expression": "not visible (facing away)",
+      "recognition_details": "short dark hair, distinct striped shirt, carrying plastic shopping bags"
+    },
+    {
+      "id": "person_left_real",
+      "position": "far left, foreground",
+      "clothing": "brown puffer vest over a dark long-sleeve shirt, dark pants, light grey or white sneakers",
+      "pose": "walking away from the camera, right arm swinging backward",
+      "visible_expression": "not visible (facing away)",
+      "recognition_details": "brown puffer vest, light-colored shoes, short hair"
+    },
+    {
+      "id": "person_mid_left_dark_real",
+      "position": "left, midground",
+      "clothing": "dark navy or black sweater, dark pants",
+      "pose": "walking away from the camera",
+      "visible_expression": "not visible (facing away)",
+      "recognition_details": "dark wavy hair, all-dark clothing"
+    },
+    {
+      "id": "person_mid_left_pink_real",
+      "position": "center-left, midground",
+      "clothing": "bright pink jacket, black cross-body bag strap, dark pants",
+      "pose": "walking away from the camera",
+      "visible_expression": "not visible (facing away)",
+      "recognition_details": "vibrant pink jacket"
+    },
+    {
+      "id": "person_central_reflected",
+      "position": "center-right, foreground",
+      "clothing": "black and white vertically striped long-sleeve shirt, dark blue jeans, black shoes (tinted slightly teal/blue by the glass)",
+      "pose": "walking away from the camera, carrying a black shoulder bag on the left shoulder and white plastic shopping bags in the right hand (mirror image)",
+      "visible_expression": "not visible (facing away)",
+      "recognition_details": "reflection of the central person, slightly distorted and color-shifted by the glass surface"
+    },
+    {
+      "id": "person_right_reflected",
+      "position": "far right, foreground",
+      "clothing": "brown puffer vest over a dark long-sleeve shirt, dark pants, light-colored sneakers (tinted slightly teal/blue by the glass)",
+      "pose": "walking away from the camera (mirror image)",
+      "visible_expression": "not visible (facing away)",
+      "recognition_details": "reflection of the person in the brown vest on the far right edge"
+    }
+  ],
+  "background": "A dense urban shopping street or pedestrian walkway. Above the pedestrians are numerous prominent store signs and layered billboards, including 'BEAUTYAVENUE' on the left and a central red and white sign reading 'sincere 先施 MK' alongside other advertisements with Chinese characters. The entire right half of the image is a reflection on a large architectural glass window, creating a nearly perfect symmetrical view of the street.",
+  "lighting": "Bright, direct daylight originating from behind and slightly to the left of the camera. This creates harsh, distinct, and elongated dark shadows of the pedestrians cast directly in front of them onto the concrete pavement.",
+  "mood": "Bustling, everyday urban life with a slightly surreal and artistic undertone due to the stark, symmetrical reflection dominating the composition.",
+  "objects_in_scene": [
+    "translucent white plastic shopping bags",
+    "black leather shoulder bag",
+    "overhead commercial signs and illuminated billboards",
+    "large reflective architectural glass pane forming the right half of the image"
+  ],
+  "unchangeable_elements": [
+    "the central vertical seam/edge of the glass pane dividing the composition",
+    "the distinct, elongated shadows cast on the ground",
+    "the reflective symmetry between the left (real) and right (reflected) sides",
+    "the structural positioning of the overhead signage"
+  ]
+}

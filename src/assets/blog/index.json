@@ -1,5 +1,12 @@
 [
   {
+    "slug": "ai-image-gen-json-prompting",
+    "title": "JSON Prompt for reliable AI image editing",
+    "image": "images/ai-image-gen-json-prompting.png",
+    "date": "2026-03-19",
+    "excerpt": "How to prompt AI image generation models in a reliable way using JSON."
+  },
+  {
     "slug": "android-ui-ai-automation",
     "title": "Android UI automation with AI and python",
     "image": "images/android-ui-ai-automation.jpeg",

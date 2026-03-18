@@ -3,10 +3,15 @@
   <h1>Blog</h1>
   <ul id="blogList">
     <li *ngFor="let post of posts" [routerLink]="['/blog', post.slug]">
-      <span class="post-title">{{ post.title }}</span>
-      <span class="post-date">{{ post.date }}</span>
-      <span class="post-excerpt">{{ post.excerpt }}</span>
-      <span class="post-read-more">{{ 'blog.read_more' | translate }}</span>
+      <div *ngIf="post.image" class="post-image-wrap">
+        <img [src]="'assets/blog/' + post.image" [alt]="post.title" class="post-image" />
+      </div>
+      <div class="post-content">
+        <span class="post-title">{{ post.title }}</span>
+        <span class="post-date">{{ post.date }}</span>
+        <span class="post-excerpt">{{ post.excerpt }}</span>
+        <span class="post-read-more">{{ 'blog.read_more' | translate }}</span>
+      </div>
     </li>
   </ul>
 </div>

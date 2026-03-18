@@ -20,8 +20,9 @@
   font-weight: 700;
   color: $accentColor;
   text-decoration: none;
-  display: inline-block;
-  margin-bottom: 32px;
+  display: block;
+  max-width: 720px;
+  margin: 0 auto 32px;
 
   &:hover {
     text-decoration: underline;
@@ -32,6 +33,7 @@
   display: block;
   width: 100%;
   max-width: 720px;
+  margin: 0 auto;
   font-family: $mainFont;
   font-size: 0.85em;
   line-height: 170%;
@@ -77,6 +79,27 @@
         background: transparent;
         padding: 0;
         color: inherit;
+      }
+    }
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 24px 0;
+
+      img {
+        max-width: min(100%, 500px);
+        height: auto;
+        display: block;
+      }
+
+      figcaption {
+        margin-top: 8px;
+        font-size: 0.8em;
+        color: #777;
+        font-style: italic;
+        text-align: center;
       }
     }
   }
