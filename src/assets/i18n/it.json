@@ -61,7 +61,21 @@
     "title": "Progetti",
     "f24_splitter_desc": "Tool di separazione e organizzazione moduli F24 per commercialisti",
     "github_more": "Altro su GitHub",
-    "github_more_desc": "Visualizza tutti i repository pubblici e i contributi open-source."
+    "github_more_desc": "Visualizza tutti i repository pubblici e i contributi open-source.",
+    "professional_subtitle": "Esperienze Professionali Selezionate",
+    "personal_subtitle": "Personali & Open Source",
+    "case_study_label": "Case study professionale",
+    "private_note": "Enterprise · Codebase privata",
+    "technogym_title": "Backend Piattaforma Training",
+    "technogym_desc": "Ho lavorato su servizi backend e sulla logica core di training per una piattaforma wellness globale, diventando nel tempo il principale riferimento tecnico per quel dominio. Le responsabilità includevano sviluppo, manutenzione, monitoring, definizione dei requisiti, analisi funzionale e collaborazione continua con stakeholder di prodotto, marketing e business.",
+    "technogym_bullet_1": "Ownership della logica di dominio training",
+    "technogym_bullet_2": "Sviluppo backend, manutenzione e monitoring",
+    "technogym_bullet_3": "Analisi requisiti e collaborazione cross-funzionale",
+    "bonfiglioli_title": "Piattaforma IoT Industriale & Edge Data",
+    "bonfiglioli_desc": "Ho contribuito a soluzioni per la raccolta dati industriali tramite sensori e dispositivi edge in ambienti manifatturieri, lavorando anche su iniziative legate alla sensorizzazione di prodotto. Il lavoro ha coinvolto integrazione edge-cloud, data pipeline e componenti software per scenari IoT industriali.",
+    "bonfiglioli_bullet_1": "Raccolta dati da sensori e dispositivi edge",
+    "bonfiglioli_bullet_2": "Integrazione edge-to-cloud per scenari industriali",
+    "bonfiglioli_bullet_3": "Supporto a iniziative di manufacturing e smart product"
   },
   "blog": {
     "preview_title": "Ultimi Articoli",

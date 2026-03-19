@@ -61,7 +61,21 @@
     "title": "Projects",
     "f24_splitter_desc": "Local tool for splitting and organizing multi-page PDF documents by section.",
     "github_more": "More on GitHub",
-    "github_more_desc": "View all public repositories and open-source contributions."
+    "github_more_desc": "View all public repositories and open-source contributions.",
+    "professional_subtitle": "Selected Professional Work",
+    "personal_subtitle": "Personal & Open Source",
+    "case_study_label": "Professional case study",
+    "private_note": "Enterprise · Private codebase",
+    "technogym_title": "Training Platform Backend",
+    "technogym_desc": "Worked on backend services and core training logic for a global wellness platform, becoming the main technical reference for that domain over time. Responsibilities included development, maintenance, monitoring, requirements definition, feature analysis, and continuous collaboration with product, marketing, and business stakeholders.",
+    "technogym_bullet_1": "Ownership of core training domain logic",
+    "technogym_bullet_2": "Backend development, maintenance, and monitoring",
+    "technogym_bullet_3": "Requirements analysis and cross-functional collaboration",
+    "bonfiglioli_title": "Industrial IoT & Edge Data Platform",
+    "bonfiglioli_desc": "Contributed to solutions for industrial data collection through sensors and edge devices in manufacturing environments, while also working on initiatives related to product sensorization. The work involved edge-cloud integration, data pipelines, and software components for industrial IoT scenarios, described at a level compatible with enterprise confidentiality constraints.",
+    "bonfiglioli_bullet_1": "Data collection from sensors and edge devices",
+    "bonfiglioli_bullet_2": "Edge-to-cloud integration for industrial scenarios",
+    "bonfiglioli_bullet_3": "Support for internal manufacturing and smart product initiatives"
   },
   "blog": {
     "preview_title": "Latest Articles",

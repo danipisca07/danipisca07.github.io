@@ -59,7 +59,7 @@
   }
 }
 
-#schoolList, #projectList, #workList{
+#schoolList, #projectList, #workList, #caseStudyList{
   list-style: none inside none;
   padding: 0;
   margin: 0;
@@ -219,6 +219,119 @@ li{
   }
 }
 
+/* Section subtitles (Professional Work / Personal) */
+.section-subtitle {
+  width: 100%;
+  font-family: $headingFont;
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #666;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+/* Professional case study cards grid */
+#caseStudyList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  .case-study-card {
+    list-style: none;
+    border: 2px solid #000;
+    border-left: 4px solid $accentColor;
+    padding: 20px 16px;
+    cursor: default;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .case-study-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: transparent;
+      border: 2px solid $accentColor;
+      color: $accentColor;
+      padding: 2px 8px;
+      font-family: $mainFont;
+      font-size: 0.55em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .project-name {
+      font-family: $headingFont;
+      font-weight: 700;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .case-study-company {
+      font-family: $mainFont;
+      font-size: 0.65em;
+      font-weight: 700;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .project-desc {
+      font-family: $mainFont;
+      font-size: 0.65em;
+      color: #555;
+      line-height: 150%;
+      display: block;
+    }
+
+    .case-study-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0;
+
+      li {
+        font-family: $mainFont;
+        font-size: 0.6em;
+        color: #555;
+        line-height: 160%;
+        padding: 0;
+        border: none;
+
+        &::before {
+          content: "— ";
+          color: $accentColor;
+        }
+      }
+    }
+
+    .case-study-tags {
+      margin-top: 8px;
+
+      .gridBox {
+        font-size: 0.55em;
+        padding: 3px 8px;
+      }
+    }
+
+    .case-study-private {
+      font-family: $mainFont;
+      font-size: 0.55em;
+      color: #aaa;
+      font-style: italic;
+      margin-top: 4px;
+    }
+  }
+}
+
 /* Resume CTA bar */
 #resumeDiv {
   background: #000;
@@ -360,7 +473,7 @@ li{
 }
 
 @media (max-width: 550px) {
-  #schoolList, #projectList, #workList {
+  #schoolList, #projectList, #workList, #caseStudyList {
     max-width: 100%;
     flex-basis: 100%;
   }
@@ -387,7 +500,7 @@ li{
     }
   }
 
-  #projectList {
+  #projectList, #caseStudyList {
     grid-template-columns: 1fr;
   }
 
@@ -397,7 +510,7 @@ li{
 }
 
 @media (min-width: 551px) {
-  #schoolList, #projectList, #workList {
+  #schoolList, #projectList, #workList, #caseStudyList {
     max-width: 100%;
     flex-basis: 80%;
   }

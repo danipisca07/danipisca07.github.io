@@ -92,9 +92,10 @@
     <div class="grid">
       <div class="gridBox primary">C# .NET</div>
       <div class="gridBox primary">Node.js</div>
-      <div class="gridBox primary">Python</div>
       <div class="gridBox primary">MongoDB</div>
+      <div class="gridBox primary">Python</div>
       <div class="gridBox primary">Angular</div>
+      <div class="gridBox primary">Docker</div>
       <div class="gridBox">Javascript</div>
       <div class="gridBox">CSS</div>
       <div class="gridBox">Azure</div>
@@ -188,6 +189,57 @@
 <app-sliding-div backgroundColor="#ffffff" cssClasses="fullWidth">
   <div class="listDiv">
     <h1>{{ 'projects.title' | translate }}</h1>
+
+    <!-- Professional Case Studies -->
+    <h3 class="section-subtitle">{{ 'projects.professional_subtitle' | translate }}</h3>
+    <ul id="caseStudyList">
+      <li class="case-study-card">
+        <span class="case-study-badge">{{ 'projects.case_study_label' | translate }}</span>
+        <span class="project-name">{{ 'projects.technogym_title' | translate }}</span>
+        <span class="case-study-company">Technogym</span>
+        <span class="project-desc">{{ 'projects.technogym_desc' | translate }}</span>
+        <ul class="case-study-bullets">
+          <li>{{ 'projects.technogym_bullet_1' | translate }}</li>
+          <li>{{ 'projects.technogym_bullet_2' | translate }}</li>
+          <li>{{ 'projects.technogym_bullet_3' | translate }}</li>
+        </ul>
+        <div class="grid case-study-tags">
+          <span class="gridBox primary">C# .NET</span>
+          <span class="gridBox primary">Node.js</span>
+          <span class="gridBox primary">MongoDB</span>
+          <span class="gridBox">Backend</span>
+          <span class="gridBox">Microservices</span>
+          <span class="gridBox">AWS</span>
+          <span class="gridBox">Datadog</span>
+          <span class="gridBox">BigQuery</span>
+        </div>
+        <span class="case-study-private">{{ 'projects.private_note' | translate }}</span>
+      </li>
+      <li class="case-study-card">
+        <span class="case-study-badge">{{ 'projects.case_study_label' | translate }}</span>
+        <span class="project-name">{{ 'projects.bonfiglioli_title' | translate }}</span>
+        <span class="case-study-company">Bonfiglioli</span>
+        <span class="project-desc">{{ 'projects.bonfiglioli_desc' | translate }}</span>
+        <ul class="case-study-bullets">
+          <li>{{ 'projects.bonfiglioli_bullet_1' | translate }}</li>
+          <li>{{ 'projects.bonfiglioli_bullet_2' | translate }}</li>
+          <li>{{ 'projects.bonfiglioli_bullet_3' | translate }}</li>
+        </ul>
+        <div class="grid case-study-tags">
+          <span class="gridBox primary">Docker</span>
+          <span class="gridBox primary">Azure IoT Edge</span>
+          <span class="gridBox primary">DevOps</span>
+          <span class="gridBox">Edge Computing</span>
+          <span class="gridBox">Industrial Data</span>
+          <span class="gridBox">KubeEdge</span>
+          <span class="gridBox">IoT</span>
+        </div>
+        <span class="case-study-private">{{ 'projects.private_note' | translate }}</span>
+      </li>
+    </ul>
+
+    <!-- Personal Projects -->
+    <h3 class="section-subtitle" style="margin-top: 32px;">{{ 'projects.personal_subtitle' | translate }}</h3>
     <ul id="projectList">
       <li onClick='window.open("/f24_pdf_splitter")'>
         <span class="project-name">F24 PDF Splitter</span>

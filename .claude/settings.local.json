@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(rm \"/c/Git Repos/danipisca07.github.io/.claude/launch.json\")",
+      "Bash(rmdir \"/c/Git Repos/danipisca07.github.io/.claude\")"
+    ]
+  }
+}
