@@ -91,10 +91,17 @@ Keep the same composition, scene structure, and background unless the JSON expli
 
 ### Step 4: The Result
 
-<figure>
-  <img src="assets/blog/images/json-prompting-output.jpg" alt="Result image">
-  <figcaption>The final output after applying the four targeted edits in a single pass.</figcaption>
-</figure>
+<div class="figure-row">
+  <figure>
+    <img src="assets/blog/images/json-prompting-source.jpg" alt="Starting image">
+    <figcaption>Source image.</figcaption>
+  </figure>
+  <figure>
+    <img src="assets/blog/images/json-prompting-output.jpg" alt="Result image">
+    <figcaption>The final output after applying the four targeted edits in a single pass.</figcaption>
+  </figure>
+</div>
+
 
 **What worked:**
 

@@ -92,6 +92,7 @@
         max-width: min(100%, 500px);
         height: auto;
         display: block;
+        cursor: zoom-in;
       }
 
       figcaption {
@@ -101,6 +102,60 @@
         font-style: italic;
         text-align: center;
       }
+    }
+
+    .figure-row {
+      display: flex;
+      gap: 16px;
+      margin: 24px 0;
+
+      figure {
+        flex: 1;
+        margin: 0;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 550px) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+
+  img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    cursor: default;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      color: #ccc;
     }
   }
 }

@@ -1,4 +1,9 @@
 <div class="blog-page">
   <a routerLink="/blog" class="back-link">{{ 'blog.back_list' | translate }}</a>
-  <markdown [src]="markdownSrc" class="post-content"></markdown>
+  <markdown [src]="markdownSrc" class="post-content" (ready)="onMarkdownReady()"></markdown>
+</div>
+
+<div class="lightbox" *ngIf="lightboxSrc" (click)="closeLightbox()">
+  <button class="lightbox-close" (click)="closeLightbox()">&#x2715;</button>
+  <img [src]="lightboxSrc" [alt]="lightboxAlt" (click)="$event.stopPropagation()">
 </div>
