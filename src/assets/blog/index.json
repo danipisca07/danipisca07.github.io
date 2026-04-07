@@ -12,5 +12,12 @@
     "image": "images/android-ui-ai-automation.jpeg",
     "date": "2026-03-12",
     "excerpt": "Automating UI interaction on any android app using python and AI (and sniffing API calls if you want to)."
+  },
+  {
+    "slug": "fSpy-angular-porting",
+    "title": "Porting of fSpy 3D Camera matching to angular",
+    "image": "images/fSpy-angular-porting.png",
+    "date": "2026-04-07",
+    "excerpt": "Engeneering case study: Porting complex library from desktop app to angular web library."
   }
 ]
