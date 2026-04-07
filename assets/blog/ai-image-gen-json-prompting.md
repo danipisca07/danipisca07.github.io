@@ -49,7 +49,7 @@ Be specific and visually descriptive. Do not generate a new image. Only return t
 
 The model will return a highly detailed JSON map of the image. You will notice how it cleanly separates subjects (like `person_central_real` and `person_left_real`) as well as environmental factors.
 
-[See original json](assets/blog/files/json-prompting-edit-prompt-source.json)
+[See original json](files/json-prompting-edit-prompt-source.json)
 
 If want to see other prompt examples to use for the generation of json that highlights other details in a photo, make sure to read the article to the end!
 
@@ -72,7 +72,7 @@ Here is the modified JSON containing the injected `"change"` instructions:
   <figcaption>The original JSON (left) vs. the edited JSON with injected change fields (right).</figcaption>
 </figure>
 
-[See full edited json](assets/blog/files/json-prompting-edit-prompt-edit.json)
+[See full edited json](files/json-prompting-edit-prompt-edit.json)
 
 ### Step 3: Running the Edit
 
