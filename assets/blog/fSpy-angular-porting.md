@@ -4,7 +4,7 @@ When building web applications that mix 3D models with real-world photographs, c
 
 This case study breaks down the architectural challenges of dismantling a legacy desktop tool and rebuilding it as a reactive, web-native Angular component with direct Three.js integration.
 
-> If you want to know more about why I needed to do this: [Medium post]()
+> If you want to know more about why I needed to do this: [Medium post](https://medium.com/@danielepiscaglia/porting-fspy-to-angular-bringing-3d-camera-matching-calibration-to-the-web-05b773b62adc)
 
 ## Prerequisites checklist
 
