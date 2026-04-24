@@ -8,6 +8,11 @@ All code is open source: [→ repo link](https://github.com/danipisca07/ai-agent
 Clone it, replace the task with your own, and reproduce the comparison against your specific use case.
 → At the end of the article there is also a ready-to-use prompt to let claude code do it all for you.
 
+<figure>
+  <img src="assets/blog/images/stagehand-vs-browseruse.png" alt="Stagehand vs browser-use">
+  <figcaption>AI-driver broswer automation showdown</figcaption>
+</figure>
+
 If you don't know what stagehand and browser-use are, read my introduction on [medium](https://medium.com/@danielepiscaglia/stagehand-vs-browser-use-0f28df1bc938).
 ---
 
