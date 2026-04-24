@@ -19,5 +19,12 @@
     "image": "images/fSpy-angular-porting.png",
     "date": "2026-04-07",
     "excerpt": "Engeneering case study: Porting complex library from desktop app to angular web library."
+  },
+  {
+    "slug": "stagehand-vs-browseruse",
+    "title": "Stagehand vs Browser Use: a caching benchmark for AI-driven browser automation",
+    "image": "images/stagehand-vs-browseruse.png",
+    "date": "2026-04-24",
+    "excerpt": "Same task, same models, different caching strategies — what the numbers reveal"
   }
 ]
