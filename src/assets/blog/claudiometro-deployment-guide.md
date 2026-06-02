@@ -127,7 +127,7 @@ These are starting-point examples. Customize all placeholders before running any
 
 ```bash
 # Clone the repository
-git clone [GITHUB_REPO_URL] claudiometro              # ── CUSTOMIZE ──
+git clone https://github.com/danipisca07/claudiometro claudiometro              # ── CUSTOMIZE ──
 
 # Install and build (from-source path)
 cd claudiometro
