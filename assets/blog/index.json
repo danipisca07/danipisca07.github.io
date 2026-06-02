@@ -26,5 +26,12 @@
     "image": "images/stagehand-vs-browseruse.png",
     "date": "2026-04-24",
     "excerpt": "Same task, same models, different caching strategies — what the numbers reveal"
+  },
+  {
+    "slug": "claudiometro",
+    "title": "Claudiometro: dashboard for realtime claude usage",
+    "image": "images/claudiometro-deployment-guide.png",
+    "date": "2026-06-02",
+    "excerpt": "Claude usages always on display"
   }
 ]
