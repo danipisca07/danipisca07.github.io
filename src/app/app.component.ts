@@ -69,7 +69,10 @@ export class AppComponent {
       this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/045-linkedin.svg'))
     this.matIconRegistry.addSvgIcon(
       'email',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/051-email.svg'))
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/051-email.svg')),
+    this.matIconRegistry.addSvgIcon(
+      'medium',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/052-medium.svg'))
   }
 
   loadPremiumSvgIcons(){
