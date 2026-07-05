@@ -33,5 +33,12 @@
     "image": "images/claudiometro-deployment-guide.png",
     "date": "2026-06-02",
     "excerpt": "Claude usages always on display"
+  },
+  {
+    "slug": "plan-orchestrator-skill",
+    "title": "plan-orchestrator skill: turn claude code in a mult-level organized development team",
+    "image": "images/plan-orchestrator-skill.png",
+    "date": "2026-07-06",
+    "excerpt": "Unleash all claude models potential"
   }
 ]
